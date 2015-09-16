@@ -18,12 +18,14 @@ ___
 I recently wanted to do a one-off web-scrape of a single page to get the hrefs of the 100+ `<a>` tags within it. A cursory google suggested Nokogiri and open-uri would do the trick, so off I went:
 
 ```ruby
+
 require 'open-uri'
 require 'nokogiri'
 
 page = Nokogiri::HTML(open("http://www.foobar.com/"))
 links = page.css('a')
-puts links.size   
+puts links.size
+
 ```
 
 ... 0. There was nothing in the website given to Nokogiri that matched an a tag selector. WTF?
