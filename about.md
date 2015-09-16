@@ -4,8 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hi, my name is Claire Parker and I'm a software developer based in Yorkshire.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+My hobbies include:
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+* Writing lists
+* Returning library books the day after they were due
+* Being a professional woman in technology
+
+I like the wacky world of JavaScript and sometimes dabble in Ruby.
+
+[<i class="fa fa-instagram"></i>](https://instagram.com/flynner__ "Instagram") &nbsp;&nbsp;[<i class="fa fa-twitter"></i>](https://twitter.com/ClaireParkerPen "Twitter")&nbsp;&nbsp;[<i class="fa fa-linkedin-square"></i>](http://uk.linkedin.com/in/claireparker2 "LinkedIn")
