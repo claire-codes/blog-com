@@ -8,12 +8,14 @@ categories:
 
 ## Or, where's the rest of my HTML??
 
-## TL;DR
+<div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+        <li>If the website you're scraping uses Ajax to load content, open-uri and Nokogiri won't cut it</li>
+        <li>Use Watir WebDriver (+ PhantomJS) instead</li>
+    </ul>
+</div>
 
-* If the website you're scraping uses Ajax to load content, open-uri and Nokogiri won't cut it
-* Use Watir WebDriver (+ PhantomJS) instead
-
-___
 
 I recently wanted to do a one-off web-scrape of a single page to get the hrefs of the 100+ `<a>` tags within it. A cursory google suggested Nokogiri and open-uri would do the trick, so off I went:
 

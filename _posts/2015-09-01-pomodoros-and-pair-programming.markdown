@@ -6,13 +6,16 @@ comments: true
 categories: 
 ---
 
-## TL;DR
-
-* Next time you pair program, try using the Pomodoro Technique to improve your productivity and mix things up a bit.
-* Breaks up difficult or tedious stories
-* Keeps morale high and dev's brains fresh
-* Time box learning or research which is sometimes easier to do solo
-* Not always possible - everything in moderation
+<div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+        <li>Next time you pair program, try using the Pomodoro Technique to improve your productivity and mix things up a bit.</li>
+        <li>Breaks up difficult or tedious stories</li>
+        <li>Keeps morale high and dev's brains fresh</li>
+        <li>Time box learning or research which is sometimes easier to do solo</li>
+        <li>Not always possible - everything in moderation</li>
+   </ul>
+</div>
 
 ![A pair of Pomodoros](/assets/two_pomodoros.jpg "A pair of Pomodoros")
 
