@@ -19,15 +19,14 @@ categories:
 
 I recently wanted to do a one-off web-scrape of a single page to get the hrefs of the 100+ `<a>` tags within it. A cursory google suggested Nokogiri and open-uri would do the trick, so off I went:
 
-~~~ruby
-
+{% highlight ruby %}
 require 'open-uri'
 require 'nokogiri'
 
 page = Nokogiri::HTML(open("http://www.foobar.com/"))
 links = page.css('a')
 puts links.size
-~~~
+{% endhighlight %}
 
 ... 0. There was nothing in the website given to Nokogiri that matched an a tag selector. WTF?
 
@@ -37,7 +36,7 @@ I poked around in the page scripts and finally realised that all the links were 
 
 Instead I needed to load up the web page using a web driver which would give the scripts time to do their thing. I ended up using Waitr WebDriver as in [this](http://stackoverflow.com/questions/13492449/watir-webdriver-phantomjs-and-ghostdriver) StackOverflow answer. For bonus points I used PhantomJS as it was tidier and less annoying than having Firefox pop up when I ran the script (yup even though it's an ad-hoc task I'll never run again!). 
 
-~~~
+{% highlight ruby %}
 require 'watir-webdriver'
 
 browser = Watir::Browser.new :phantomjs
@@ -45,7 +44,7 @@ browser.goto("http://www.foobar.com/")
 hrefs = browser.links.map { |link| link.href }
 
 browser.close
-~~~
+{% endhighlight %}
 
 `links` is a Watir method used to get all the ... you've guessed it ... links from the page, as `Watir::Anchor` objects. Then I just grab hrefs and map them into array in one single line. Woop!
 

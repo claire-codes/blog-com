@@ -29,7 +29,7 @@ Pomodoro is the Italian word for tomato and you can time your 25 minutes using a
 
 ## How can this help me with Pair Programming?
 
-Pair programming ~~can be~~ is very intense and draining. It can be difficult to find natural breaks when you're working together - you don't want to be the one to admit defeat and ask for a toilet break! By introducing the concept of Pomordoros, breaks happen automatically and it gives you just enough time to check your emails and get a drink. As you're working in a pair this can also help you avoid the temptation to stop work for longer than 5 minutes between Pomodoros - easy to do when you're on your own.
+Pair programming <del>can be</del> is very intense and draining. It can be difficult to find natural breaks when you're working together - you don't want to be the one to admit defeat and ask for a toilet break! By introducing the concept of Pomordoros, breaks happen automatically and it gives you just enough time to check your emails and get a drink. As you're working in a pair this can also help you avoid the temptation to stop work for longer than 5 minutes between Pomodoros - easy to do when you're on your own.
 
 Breaking little and often helps keep you mentally fresh and is particularly beneficial when you're bug-fixing or working on a tricky story together - sometimes the 5 minute break from the screen is all you need for inspiration to strike. And the knowledge that a fresh brew is less than 25 minutes away can help keep morale up when you're fixing a particularly demoralising bug.
 

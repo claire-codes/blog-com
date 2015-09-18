@@ -15,7 +15,7 @@ I went to my first hack a couple of weeks ago and wanted to (belatedly) share wi
 
 ### You don't have to stay awake for 24 hours
 
-Obvious to some but not to me. If your hack lasts for 24 hours, it's not against the rules to fall asleep during that time! Of course some people stayed up all night, but others brought sleeping bags with them and found a quiet corner somewhere. I, however, went home for an extra long disco nap, becuase it turns out ...
+Obvious to some but not to me. If your hack lasts for 24 hours, it's not against the rules to fall asleep during that time! Of course some people stayed up all night, but others brought sleeping bags with them and found a quiet corner somewhere. I, however, went home for an extra long disco nap, because it turns out ...
 
 ## Hack Misconception #2
 
@@ -27,7 +27,7 @@ Just as you're not legally obliged to stay awake, neither are you chained to the
 
 ### You don't need a team to enter the hack
 
-Solo hackers are welcome, and you might even meet people to team up with when you arrive. I teamed up with a couple of guys from work and shared all the ~~pain~~ fun of pushing and pulling on a Git repo with them.
+Solo hackers are welcome, and you might even meet people to team up with when you arrive. I teamed up with a couple of guys from work and shared all the <del>pain</del> fun of pushing and pulling on a Git repo with them.
 
 ## Hack Misconception #4 
 
