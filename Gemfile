@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.1'
 
 gem 'bundler'
 gem 'jekyll', '~>2.5.3'

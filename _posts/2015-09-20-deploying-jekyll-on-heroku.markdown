@@ -8,7 +8,9 @@ categories:
 
 # How I deployed my Jekyll blog to Heroku step-by-step
 
-If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours. Here's a guide to the Hows & Whys.
+If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours. 
+
+Here's a guide to the Hows & Whys. You should be able to follow along as long as you're happy with the command line.
 
 ## 1. Make a Jekyll blog
 
