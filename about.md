@@ -16,4 +16,4 @@ My hobbies include:
 
 I like the wacky world of JavaScript and sometimes dabble in Ruby.
 
-I enjoy talking about web development and am always interested in new and exciting projects or speaking opportunities. You can see a bit of what I do on my [http://www.claireparker-pen.com/portfolio/](portfolio page "my portfolio") or check out my [GitHub account](https://github.com/claireparker "GitHub")
+I enjoy talking about web development and am always interested in new and exciting projects or speaking opportunities. You can see a bit of what I do on my [portfolio page](http://www.claireparker-pen.com/portfolio/ "my portfolio") or check out my [GitHub account](https://github.com/claireparker "GitHub")
