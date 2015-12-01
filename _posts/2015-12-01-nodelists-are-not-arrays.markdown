@@ -1,56 +1,80 @@
 ---
 layout: post
 title: "NodeLists are not Arrays"
-date: 2015-12-01 00:00:16 +0100
+date: 2015-12-01 00:00:16 +0000
 comments: true
 categories: 
-published: false
+published: true
 ---
-# Nodelists are not Arrays
 
-When you're working with the DOM, it's tempting to think that when you select a group of elements from the page that you've got an array. Wrong! It might look like a duck and walk like a duck, but it moos like a cow.
+When you're working with the DOM, it's tempting to think that when you select a group of elements from the page that you've got an array. Right? Wrong! It might look like a duck and walk like a duck, but it moos like a cow. Just what is this monster?! It's a NodeList.
 
 Try this in your browser console:
 
-```
->var whoami = document.querySelectorAll('div');
+{% highlight console %}
+> var whoami = document.querySelectorAll('div');
 > Object.getPrototypeOf(whoami)
 NodeList {}
-```
+{% endhighlight %}
 
 Compare this with:
 
-```
-var standardArray = [1,2,3];
-Object.getPrototypeOf(standardArray);
+{% highlight console %}
+> var standardArray = [1,2,3];
+> Object.getPrototypeOf(standardArray);
 Array {}
-```
+{% endhighlight %}
 
-The `Object.getPrototypeOf()` method returns the object from which the current object inherits from. You can call this repeatedly to reach Object and finally null.
+The `Object.getPrototypeOf()` method returns the next object in the prototype chain, i.e. the object your current variable directly inherited all it's methods and properties from. You can call this method repeatedly to reach Object (everything inherits from Object) and finally null. So this gives two prototype chains that look like:
 
-Unfortunately this means that you miss out on all the lovely array methods like filter, map and forEach loops. If you want to do anything to this Nodelist you'll be doing it with a standard for-loop sorry!
+{% highlight console %}
+whoami -> NodeList.prototype -> Object.prototype -> null
 
-### What is a Nodelist and what can I do with it?
+standardArray -> Array.prototype -> Object.prototype -> null
+{% endhighlight %}
 
-All you can do with a Nodelist out the box is for loop and length.
+NodeLists have nothing to do with arrays in JavaScript, and this means that you can't use any of the lovely array methods like filter and map and even forEach loops on them. If you want to do anything to a NodeList you'll need to use a standard for-loop.
 
-A Nodelist is ...
+Remember you can see what methods a particular object inherits from its prototype with `Object.getOwnProperties(foo.prototype)` - compare the difference for Array and NodeList and weep.
 
-We can see what methods the object inherits from its prototype by executing hasOwnProperties ...
+### What is a NodeList and what can I do with it?
+
+A NodeList is a collection of HTML nodes. There's only a few useful things you can with one.
+
+* `whoami.length` - you can see how many nodes are in the NodeList by calling length on it.
+* `whoami.item(n)` or `whoami[n]` to access a certain item in the NodeList by its index.
+
+You can combine both these magical methods to iterate using a boring old for-loop.
+
+{% highlight javascript %}
+for (var i=0; i < whoami.length; i++) {
+   console.log(whoami[i]);
+}
+{% endhighlight %}
 
 ### Workarounds
 
+All is not lost though. Simply convert the NodeList to an array and you can use all whizzy Array.prototype methods you like.
+
+{% highlight javascript %}
+var pseudoArrayThing = Array.prototype.slice.call(whoami);
+// or
+var otherArrayThing = Array.from(whoami);
+{% endhighlight %}
 
 ### ES6 Workarounds
 
-typeof x
-Object.prototype.toString.call(true)
+Convert to an array using the spread operator.
 
+{% highlight javascript %}
+var spreadArrayThing = [...whoami];
+{% endhighlight %}
 
-Workarounds are ...
-* Converting to an array using slice http://www.javascriptkit.com/javatutors/arrayprototypeslice.shtml
-ES6 workarounds are ...
-https://developer.mozilla.org/en/docs/Web/API/NodeList
-http://duruk.net/nodelists-and-arrays-in-javascript/
-http://blog.kevinchisholm.com/javascript/javascript-object-inspection-with-object-getownpropertynames/
-Mention JavaScript somewhere
+#### P.S.
+
+Find the type of a object foo using:
+`Object.prototype.toString.call(foo)`
+
+### Further Reading
+
+[https://developer.mozilla.org/en/docs/Web/API/NodeList](https://developer.mozilla.org/en/docs/Web/API/NodeList)
