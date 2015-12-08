@@ -7,6 +7,12 @@ A list of stuff I have done so I can remember it all.
 
 # Projects
 
+* ## emoji-commit
+
+    A RubyGem that installs a Git hook to prefix all your commit messages with GitHub-friendly emojis. :neckbeard: :information_desk_person: :hammer:
+
+    [https://rubygems.org/gems/emoji-commit](https://rubygems.org/gems/emoji-commit)
+
 * ## cheerup
 
    A RubyGem that <del>insults</del> cheers you up from the command line.
@@ -15,9 +21,11 @@ A list of stuff I have done so I can remember it all.
 
 # Talks
 
-* I gave a lightning talk called "Coding After Codecademy" at Manchester Ladies Who Code event in October 2015. I'm the first speaker in [this video](https://www.youtube.com/watch?v=Ofo6NvZtz3A&feature=youtu.be).
+* I did a joint talk called “Devs are from Mars, Scrum Masters are from Venus” with my lovely former scrummy-mummy [The_Karen_B](https://twitter.com/The_Karen_B) at LeedsTechHub’s quarterly Women in Tech event in December 2015. :space_invader:
+* 
+* I gave a lightning talk called "Coding After Codecademy" at Manchester Ladies Who Code event in October 2015. I'm the first speaker in [this video](https://www.youtube.com/watch?v=Ofo6NvZtz3A&feature=youtu.be). :zap:
 
-* I also talked about the Pomodoro Technique at an Ada Lovelace day event held at Infinity Works Leeds in October 2015 but alas they didn't record it, you'll have to take my word for it!
+* I also talked about the Pomodoro Technique at an Ada Lovelace day event held at Infinity Works Leeds in October 2015. :tomato:
 
 # Other
 
