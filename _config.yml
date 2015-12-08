@@ -12,3 +12,6 @@ github_username:  claireparker
 markdown: kramdown
 
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile']
+
+gems:
+  - jemoji
