@@ -4,6 +4,7 @@ title: "Paths in Ruby"
 date: 2016-01-01 14:30:01 +0000
 comments: true
 categories:
+- ruby
 published: true
 ---
 

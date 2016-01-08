@@ -6,14 +6,27 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
+  <div>
+    <p>Read posts about:</p>
+    <input type="checkbox" data-category="ruby" onchange="displayFiltered()"/>Ruby <br />
+    <input type="checkbox" data-category="javascript" onchange="displayFiltered()"/>JavaScript <br />
+    <input type="checkbox" data-category="longread" onchange="displayFiltered()"/>Longread <br />
+    <input type="checkbox" data-category="heroku" onchange="displayFiltered()"/>Heroku <br />
+    <input type="checkbox" data-category="css" onchange="displayFiltered()"/>CSS <br />
+    <input type="checkbox" data-category="angularjs" onchange="displayFiltered()"/>AngularJS
+  </div>
+
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
+      <li class="post-head" data-categories="{%for category in post.categories %}{{category}} {% endfor %}">
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <h4>{%for category in post.categories %}
+          <span>{{category}} </span>
+        {% endfor %}</h4>
       </li>
     {% endfor %}
   </ul>
@@ -21,3 +34,41 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+
+<script type="text/javascript">
+var findSelectedItems = function() {
+  var allTypes = document.getElementsByTagName('input');
+  var which = [];
+  for (var i = 0; i < allTypes.length; i++) {
+    if (allTypes[i].checked) {
+      which.push(allTypes[i].getAttribute('data-category'));
+    }
+  };
+  return which;
+}
+
+var displayFiltered = function() {
+  var itemsToShow = findSelectedItems();
+  // Go through all li's and decide whether to show or hide depending on whether it's in the itemsToShow array
+  var allItems = document.querySelectorAll('li.post-head');
+  // if none are checked, show everything again
+  if (itemsToShow.length == 0) {
+    for (var l = 0; l < allItems.length; l++) {
+      allItems[l].style.display = "list-item";
+    }
+  } else {
+    for (var i = 0; i < allItems.length; i++) {
+      // Account for items with more than one category
+      types = allItems[i].getAttribute('data-categories').split(" ");
+      for (var j = 0; j < types.length; j++) {
+        if (itemsToShow.indexOf(types[j]) != -1) {
+          allItems[i].style.display = "list-item";
+          break;
+        } else {
+          allItems[i].style.display = 'none';
+        }
+      }
+    }
+  }
+}
+</script>

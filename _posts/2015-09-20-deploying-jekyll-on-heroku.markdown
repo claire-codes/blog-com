@@ -3,12 +3,14 @@ layout: post
 title: "Deploying Jekyll on Heroku"
 date: 2015-09-20 00:00:00 +0100
 comments: true
-categories: 
+categories:
+- ruby
+- heroku
 ---
 
 # How I deployed my Jekyll blog to Heroku step-by-step
 
-If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours. 
+If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours.
 
 Here's a guide to the Hows & Whys. You should be able to follow along as long as you're happy with the command line.
 
@@ -23,7 +25,7 @@ cd daftBlog
 jekyll serve
 {% endhighlight %}
 
-You've installed the Jekyll RubyGem and used it to generate a new blog called 'daftBlog'. You've gone into the new folder that Jekyll created 
+You've installed the Jekyll RubyGem and used it to generate a new blog called 'daftBlog'. You've gone into the new folder that Jekyll created
 and asked to Jekyll to run the blog. Now if you open `http://localhost:4000` in your browser you should see Jekyll's Hello World blog pages.
 
 *Note:* From here onwards create all the files in the root of your blog, i.e. where you should be right now in the terminal.
@@ -106,5 +108,3 @@ heroku open
 You've initialised the directory ready for Git funtimes, created a Heroku app which will also add the relevant stuff to your git config, committed your work to Git and pushed it to Heroku. All that's left to do is to open it from the command line like a boss and marvel in your blog's glory!
 
 See the source code for this very blog [here](https://github.com/claireparker/blog-com) as a working example - how meta!
-
-

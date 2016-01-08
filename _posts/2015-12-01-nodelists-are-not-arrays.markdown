@@ -3,7 +3,8 @@ layout: post
 title: "NodeLists are not Arrays"
 date: 2015-12-01 00:00:16 +0000
 comments: true
-categories: 
+categories:
+- javascript
 published: true
 ---
 

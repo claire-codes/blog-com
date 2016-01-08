@@ -3,7 +3,8 @@ layout: post
 title: "Pomodoros &amp; Pair Programming"
 date: 2015-09-01 23:00:16 +0100
 comments: true
-categories: 
+categories:
+- longread
 ---
 
 <div class="tldr">
@@ -19,7 +20,7 @@ categories:
 
 ![A pair of Pomodoros](/assets/two_pomodoros.jpg "A pair of Pomodoros")
 
-I currently work in a team where we pair program most of the time, and I've found that applying the principles of the Pomodoro Technique to when pairing - focus for a bit then a short break - has helped me work more effectively. 
+I currently work in a team where we pair program most of the time, and I've found that applying the principles of the Pomodoro Technique to when pairing - focus for a bit then a short break - has helped me work more effectively.
 
 ## What's a Pomodoro when it's at home?
 

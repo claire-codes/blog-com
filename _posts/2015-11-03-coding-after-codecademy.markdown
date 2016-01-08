@@ -3,7 +3,8 @@ layout: post
 title: "Coding After Codecademy"
 date: 2015-11-10 00:00:16 +0100
 comments: true
-categories: 
+categories:
+- longread
 ---
 
 Last month, I gave a lightning talk called ["Coding After Codecademy"](https://www.youtube.com/watch?v=Ofo6NvZtz3A&feature=youtu.be) which was inspired by people asking me how to improve their newly acquired web development skills, now they've completed some Codecademy/Udacity/Code School courses. They've got basic HTML, CSS and JavaScript syntax, so what are some good things to start building or learning next? I know how daunting it can be to be faced with a blank editor at that stage, so in my talk I gave some common-sense advice that I would have appreciated when I was in that position myself.
@@ -47,16 +48,16 @@ function kilosToPounds(kilos) {
 }
 {% endhighlight %}
 
-Could you use a map or apply function instead of a for-loop? Could you make your web app load faster if you minified your resources or didn't use a CDN for that font? _Do you even need jQuery??_ 
+Could you use a map or apply function instead of a for-loop? Could you make your web app load faster if you minified your resources or didn't use a CDN for that font? _Do you even need jQuery??_
 
 If possible, get a more experienced developer to review your code to learn functional improvements and also stylistic improvements, because there is always more than one way to do it when you're writing code.
 
 ## Code efficiently
-  
-How quick can you code? This is dependent on learning the syntax (which you're already doing) and also some more practical skills. 
+
+How quick can you code? This is dependent on learning the syntax (which you're already doing) and also some more practical skills.
 
 1. Learn to type! Can you type quickly? Can you type _code_ quickly with all the special characters? Can you touch type? It's a no-brainer that being able to type well will save you time not only when coding but when using a computer in general.     
-2. Choose an editor and learn to use it well: learn all the keyboard shortcuts so that you don't have to take your hands off the keyboard to accomplish your tasks. 
+2. Choose an editor and learn to use it well: learn all the keyboard shortcuts so that you don't have to take your hands off the keyboard to accomplish your tasks.
 
 Now you can just concentrate on the screen without looking at the keyboard or moving your hands away.
 

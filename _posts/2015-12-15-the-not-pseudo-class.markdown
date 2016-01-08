@@ -3,7 +3,8 @@ layout: post
 title: "The :not() pseudo-class"
 date: 2015-12-15 00:00:01 +0000
 comments: true
-categories: 
+categories:
+- css
 published: true
 ---
 How do you use CSS to style a particular element differently from other similar elements? You'd stick a class or ID on it, like so:

@@ -3,7 +3,10 @@ layout: post
 title: "How to Deploy an AngularJS App on Heroku"
 date: 2015-09-30 00:00:00 +0100
 comments: true
-categories: 
+categories:
+- javascript
+- angularjs
+- heroku
 ---
 
 ## Or getting an EAN app running on Heroku
@@ -35,7 +38,7 @@ No, I am not telling you how to write an Angular app.
 
 Navigate to the root folder of your project in the terminal. If you haven't already, make sure you've got the following installed:
 
-* [Node & NPM](https://nodejs.org/en/) 
+* [Node & NPM](https://nodejs.org/en/)
 * [Git](https://git-scm.com/downloads)
 * [Heroku toolbelt](https://toolbelt.heroku.com/)
 
@@ -89,7 +92,7 @@ app.listen(process.env.PORT || 3000);
 We've set up the root route (not a typo), which returns the view we want to use. It's important to use the notation on line 6 instead of an absolute pathname: see [this StackOverflow question](http://stackoverflow.com/questions/25463423/res-sendfile-absolute-path) for why.
 
 ### Nearly there ...
- 
+
 Heroku needs a Procfile to correctly run your app.
 
 Make a new file in your project's root called `Procfile` and enter the line:
