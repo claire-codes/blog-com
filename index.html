@@ -7,26 +7,25 @@ layout: default
   <h1 class="page-heading">Posts</h1>
 
   <div>
-    <p>Read posts about:</p>
-    <input type="checkbox" data-category="ruby" onchange="displayFiltered()"/>Ruby <br />
-    <input type="checkbox" data-category="javascript" onchange="displayFiltered()"/>JavaScript <br />
-    <input type="checkbox" data-category="longread" onchange="displayFiltered()"/>Longread <br />
-    <input type="checkbox" data-category="heroku" onchange="displayFiltered()"/>Heroku <br />
-    <input type="checkbox" data-category="css" onchange="displayFiltered()"/>CSS <br />
-    <input type="checkbox" data-category="angularjs" onchange="displayFiltered()"/>AngularJS
+    <p>Filter by category:</p>
+    <input type="checkbox" data-category="ruby" id="ruby-check" onchange="displayFiltered()"/><label for="ruby-check">Ruby</label> <input type="checkbox" data-category="javascript" id="javascript-check" onchange="displayFiltered()"/><label for="javascript-check">JavaScript</label> <input type="checkbox" data-category="longread" id="longread-check" onchange="displayFiltered()"/><label for="longread-check">Longread</label> <input type="checkbox" data-category="heroku" id="heroku-check" onchange="displayFiltered()"/><label for="heroku-check">Heroku</label> <input type="checkbox" data-category="css" id="css-check" onchange="displayFiltered()"/><label for="css-check">CSS</label> <input type="checkbox" data-category="angularjs" id="angularjs-check" onchange="displayFiltered()"/><label for="angularjs-check">AngularJS</label>
   </div>
+  <br />
 
   <ul class="post-list">
     {% for post in site.posts %}
       <li class="post-head" data-categories="{%for category in post.categories %}{{category}} {% endfor %}">
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {%for category in post.categories %}
+          <span>/{{category}} </span>
+        {% endfor %}
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        <h4>{%for category in post.categories %}
-          <span>{{category}} </span>
-        {% endfor %}</h4>
+
+        <br />
+
       </li>
     {% endfor %}
   </ul>
@@ -34,6 +33,27 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+
+<style>
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked + label {
+  background-color: #454545;
+  color: white;
+}
+label {
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #454545;
+  padding: 4px;
+  margin: 1px;
+}
+label:hover {
+  background-color: #454545;
+  color: white;
+}
+</style>
 
 <script type="text/javascript">
 var findSelectedItems = function() {
