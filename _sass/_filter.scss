@@ -1,0 +1,18 @@
+input[type="checkbox"] {
+	display: none;
+	&:checked + label {
+		background-color: $text-color;
+		color: $background-color;
+	}
+}
+label {
+	cursor: pointer;
+	border-radius: 3px;
+	border: 1px solid $text-color;
+	padding: 4px;
+	margin: 1px;
+	&:hover {
+		background-color: $text-color;
+		color: $background-color;
+	}
+}
