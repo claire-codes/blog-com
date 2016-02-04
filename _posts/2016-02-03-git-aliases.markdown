@@ -6,21 +6,41 @@ comments: true
 categories:
 - git
 ---
-How many times do type out the same repetitive commands for Git every day? Want to save some keystrokes? Use a Git alias. If you do:
+How many times do type out the same repetitive commands for Git every day? Want to save some keystrokes? Use a Git alias. Consider the very useful but very long:
+
+{% highlight bash %}
+git log --graph --oneline --decorate
+{% endhighlight %}
+
+What a mouthful. But all you need to do, from any directory at the command line, is type:
+
+{% highlight bash %}
+git config --global alias.plog 'log --graph --oneline --decorate'
+{% endhighlight %}
+
+Then from then on all you need to type is:
+
+{% highlight bash %}
+git plog
+{% endhighlight %}
+
+And this gives you the same output as the full version.
+
+:open_mouth:
+
+Git aliases are like shortcuts to common tasks. You can even alias already short commands, e.g.:
 
 {% highlight bash %}
 git config --global alias.s status
 {% endhighlight %}
 
-Then all you need to type to see the status of the current repo from now on is:
+And this gives you the super quick:
 
 {% highlight bash %}
 git s
 {% endhighlight %}
 
-:open_mouth:
-
-Git aliases are like shortcuts to common tasks. But wait! There's more!
+But wait! There's more!
 
 I find myself wanting to add everything to staging in the current directory _except_ one particular file or folder. This can be cumbersome, adding everything separately and awkwardly avoiding that one pesky file. But there's a quicker way: add everything, then unstage the thing you don't want in the commit, for example `foo.txt`:
 
