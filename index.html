@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Posts Showing <span id="displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</h1>
 
   <div>
     <p>Filter by category:</p>
@@ -47,7 +47,11 @@ layout: default
       }
     };
     return which;
-  }
+  };
+
+  var countDisplayed = function() {
+    document.getElementById('displayed').innerHtml
+  };
 
   var displayFiltered = function() {
     var itemsToShow = findSelectedItems();
@@ -72,5 +76,6 @@ layout: default
         }
       }
     }
-  }
+    countDisplayed();
+  };
 </script>
