@@ -4,9 +4,10 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts Showing <span id="displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</h1>
+  <h1 class="page-heading">Posts</h1>
 
   <div>
+    <p>Showing <span id="displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</p>
     <p>Filter by category:</p>
     <div style="line-height: 35px">
       {% for c in site.categories %}
@@ -50,7 +51,7 @@ layout: default
   };
 
   var countDisplayed = function() {
-    document.getElementById('displayed').innerHtml
+    document.getElementById('displayed').innerHTML = document.querySelectorAll('li.post-head.show').length;
   };
 
   var displayFiltered = function() {
@@ -60,18 +61,19 @@ layout: default
     // if none are checked, show everything again
     if (itemsToShow.length == 0) {
       for (var l = 0; l < allItems.length; l++) {
-        allItems[l].style.display = "list-item";
+        allItems[l].className = "post-head show";
       }
     } else {
       for (var i = 0; i < allItems.length; i++) {
+        allItems[i].className = "post-head";
         // Account for items with more than one category
         types = allItems[i].getAttribute('data-categories').split(" ");
         for (var j = 0; j < types.length; j++) {
           if (itemsToShow.indexOf(types[j]) != -1) {
-            allItems[i].style.display = "list-item";
+            allItems[i].className = "post-head show";
             break;
           } else {
-            allItems[i].style.display = 'none';
+            allItems[i].className = "post-head hide";
           }
         }
       }

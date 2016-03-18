@@ -16,3 +16,9 @@ label {
 		color: $background-color;
 	}
 }
+.show {
+	display: list-item !important;
+}
+.hide {
+	display: none !important;
+}
