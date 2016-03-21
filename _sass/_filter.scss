@@ -12,7 +12,7 @@ label {
 	padding: 4px;
 	margin: 1px;
 	&:hover {
-		background-color: $text-color;
+		background-color: lighten($text-color, 25%);
 		color: $background-color;
 	}
 }
