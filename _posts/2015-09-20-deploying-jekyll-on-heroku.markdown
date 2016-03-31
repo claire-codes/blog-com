@@ -10,7 +10,7 @@ categories:
 
 # How I deployed my Jekyll blog to Heroku step-by-step
 
-If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours.
+If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours. :apple::green_apple:
 
 Here's a guide to the Hows & Whys. You should be able to follow along as long as you're happy with the command line.
 
@@ -28,7 +28,7 @@ jekyll serve
 You've installed the Jekyll RubyGem and used it to generate a new blog called 'daftBlog'. You've gone into the new folder that Jekyll created
 and asked to Jekyll to run the blog. Now if you open `http://localhost:4000` in your browser you should see Jekyll's Hello World blog pages.
 
-*Note:* From here onwards create all the files in the root of your blog, i.e. where you should be right now in the terminal.
+*Note:*  from here onwards create all the files in the root of your blog, i.e. where you should be right now in the terminal.
 
 ## 2. Turn the blog into a Rack app
 
@@ -48,9 +48,9 @@ gem 'puma'
 gem 'rake'
 {% endhighlight %}
 
-Run `bundle install` from the command line. As well as the Bundler and Jekyll gems, you've now got a Rack gem, kramdown for parsing Markdown files (assuming your blog posts will be written in Markdown of course) and Puma as our Rack webserver.
+Run `bundle install` from the command line. As well as the Bundler and Jekyll gems, you've now got a Rack gem, kramdown for parsing Markdown files (assuming your blog posts will be written in Markdown of course) and Puma for our Rack webserver.
 
-We're using rack-contrib instead of rack-jekyll because of [this](http://mwmanning.com/2011/12/04/Jekyll-on-Heroku-Part-2.html) website and [this website](https://jbhannah.net/blog/2013/01/16/jekyll-on-heroku-without-rack-jekyll-or-custom-buildpacks.html) said so.
+We're using `rack-contrib` instead of `rack-jekyll` because of [this](http://mwmanning.com/2011/12/04/Jekyll-on-Heroku-Part-2.html) website and [this website](https://jbhannah.net/blog/2013/01/16/jekyll-on-heroku-without-rack-jekyll-or-custom-buildpacks.html) said so.
 
 Next create a `config.ru` file. This tells Rack how to run your app.
 
@@ -66,7 +66,7 @@ use Rack::TryStatic,
 run Rack::NotFound.new('_site/404.html')
 {% endhighlight %}
 
-Jekyll will have already made an `index.html` file for us, but doesn't give a 404 automatically. Create a file called `404.html` and put some valid HTML in it - just copy the index page's contents if you like for now.
+Jekyll will have already made an `index.html` file for us, but doesn't give a 404 automatically. Create a file called `404.html` and put some valid HTML in it - just copy the index page's contents if you like for now. Run `jekyll serve` to make sure this page is generated and placed in your `_site` folder. Once it's running locally hit `Ctrl-C` to stop it running and continue following this tutorial :stuck_out_tongue_winking_eye:
 
 You need to put some extra stuff in the `_config.yml` file, particularly `vendor` so that Jekyll doesn't get confused when it generates your site and looks in the wrong place for stuff. Add this line to the bottom:
 
@@ -88,7 +88,7 @@ Test your blog works as a Rack app: from the command line run the command `racku
 
 ## 3. Get blog on Heroku
 
-Finally a bit of prep for Heroku. Make a `Procfile` file:
+Another file for Heroku to know how to run your app. Make a `Procfile` file and put the following in it:
 
 {% highlight yaml %}
 web: bundle exec puma -p $PORT config.ru
