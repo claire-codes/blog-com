@@ -22,3 +22,33 @@ label {
 .hide {
 	display: none !important;
 }
+.post-list {
+	li:nth-child(odd) {
+		background: #f5f5f5;
+		&:hover {
+			background: darken($background-color, 15%);
+			.post-link {
+				color: $brand-color;
+			}
+			.post-meta {
+		        color: darken($grey-color-light, 15%);
+			}
+		}
+	}
+}
+.post-head {
+	> a {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+	&:hover {
+		background: darken($background-color, 15%);
+		.post-link {
+			color: $brand-color;
+		}
+		.post-meta {
+			color: darken($grey-color-light, 15%);
+		}
+	}
+}

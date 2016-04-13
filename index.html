@@ -20,16 +20,18 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li class="post-head" data-categories="{%for category in post.categories %}{{category}} {% endfor %}">
+          <a href="{{ post.url | prepend: site.baseurl }}">
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span class="post-link">{{ post.title }}</span>
         </h2>
 
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         {%for category in post.categories %}
-          <span>/{{category}} </span>
+          <span style="color: black;">/{{category}} </span>
         {% endfor %}
 
+        </a>
       </li>
     {% endfor %}
   </ul>
