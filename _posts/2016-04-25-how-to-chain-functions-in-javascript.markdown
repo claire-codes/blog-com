@@ -8,9 +8,9 @@ categories:
 - javascript
 ---
 
-The chaining design pattern is lovely. :sunrise: It means we can call several methods on an object in one line of code.
+The chaining design pattern is lovely. :sunrise: It means we can call several object methods in one line of code. You see this pattern used in jQuery a lot.
 
-Instead of (A) we have (B) :cake::
+Instead of several repetitive lines (A) we have a cleaner one-liner (B) :cake::
 
 {% highlight javascript %}
 // (A)
@@ -23,23 +23,25 @@ sponge.eat();
 let sponge = new Cake().mix().bake().eat();
 {% endhighlight %}
 
-Basically, you need make a bunch of methods in an object and have them all return `this`. Have all the objects in:
 
-1. an object
-2. or a prototype
+## But how?
 
-Make sure the methods modify some internal property and make a method that returns this property.
+You can't just randomly start chaining methods and hope they work. Chaining works on the methods of an individual object. Each of these methods need to return `this`, a reference to the object we're calling the method, i.e. what we want to call the subsequent method on. Here's two approaches for implementing the pattern:
 
-Returning `this` is key as you're returning the object that you want to call the next method on in the chain, i.e. this particular object.
+1. methods within an object
+2. adding methods to a prototype
+
+Our object contains an internal property that we'll modify with our chianed methods. In addition it will have a method that takes a parameter to actually do something useful with, and a final method that returns this value - this function won't need to return `this` as it won't have any other methods chaining off it.
 
 ## 1. Use an object
 
-Set up an object that contains the variable you'll be amending and all your functions.
+Create an object in the usual way. Include an internal variable you'll be amending as well as all your functions.
 
 {% highlight javascript %}
 let chainObj = {
     phrase: "",
 
+    // the setter
     setPhrase: function(noun) {
         this.phrase = noun;
         return this;
@@ -57,6 +59,8 @@ let chainObj = {
         return this;
     },
 
+    // the getter - will be called last and not chained,
+    //+so it doesn't need to return `this`
     val: function() {
         var tmp = this.phrase;
         this.phrase = "";
@@ -64,19 +68,22 @@ let chainObj = {
     }
 };
 
+// Example usage:
 let chainFoo = chainObj.setPhrase("foo").makeItRed().shoutIt().val();
 // "RED FOO"
 {% endhighlight %}
 
 ## 2. Use a prototype
 
-I never touch prototypes, they frighten me a bit. But this approach still works.
+The thought of using a prototype frighten me a bit. But this approach is still valid.
 
 {% highlight javascript %}
+// Define the internal property to modify
 let ChainPrototype = function() {
     this.phrase = "";
 };
 
+// Add a load of functions to the object's prototype
 ChainPrototype.prototype.setPhrase = function(noun) {
     this.phrase = noun;
     return this;
@@ -96,8 +103,10 @@ ChainPrototype.prototype.shoutIt = function() {
     return this;
 };
 
+// in this example we won't return `phrase` from a method,
+//+we'll just call the property directly
 let chainFoo = new ChainPrototype.setPhrase('foo').makeItRed().shoutIt().phrase;
 // 'RED FOO'
 {% endhighlight %}
 
-Either way, you will need to call them on a certain object, use some sort of a setter to pass a parameter in, then a method that returns a the value you really want at the end - this method doesn't have to return `this` as it won't be chained.
+In summary: make an object, make the methods, make them all return `this`. Boom. :facepunch::boom:
