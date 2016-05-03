@@ -7,6 +7,14 @@ published: true
 categories:
 - javascript
 ---
+<div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+        <li><strong>Allow only patch changes</strong>: <code>~1.1.3</code>, e.g. >=1.1.3 <1.2.0</li>
+        <li><strong>Allow minor changes</strong>: <code>^1.1.3</code>, e.g. >=1.1.3 <2.0.0</li>
+   </ul>
+</div>
+
 You might have noticed some unexpected characters next to the package versions of the `dependencies` or `devDependencies` properties in your `package.json` file:
 
 {% highlight javascript %}
@@ -20,21 +28,21 @@ You might have noticed some unexpected characters next to the package versions o
 
 First of all, let's understand how packages are versioned and what each of those numbers represent.
 
-Package versioning works on the principle of semantic versioning, or "semver". When you publish a new version of a module or package you should update the version number in line with certain conventions. A version number is made up of three figures representing the current increment:
+A piece of software, e.g. a node module, evolves and changes over time. When new features have been added or existing functionality has been modified, new versions of packages are released. This lets the world know that the code has changed in some way. Semantic versioning, or "semver", is a convention introduced to help give users of your package some idea of the changes in this version. A version number is made up of three figures, each of which represent a different type of change:
 
 > MAJOR.MINOR.PATCH
 
-Quoting directly from [semver.org](http://semver.org/), release a:
+You should increment the version number to indicate what changes you've made in this release. Quoting directly from [semver.org](http://semver.org/), release a:
 
 > * MAJOR version when you make incompatible API changes,
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
-Reset the other increments as appropriate: a package on version 1.4.3 releasing a major version would be released as 2.0.0.
+Reset the other increments as appropriate: a package on version 1.4.3 releasing a major version would be released as 2.0.0. See the [semver site](http://semver.org/) for more examples of how to correctly version your software.
 
 ## Carets & Tildes & Ranges, Oh my! :cat: :tiger: :bear:
 
-You've installed a dependency to your app using npm, but you're not too precious about the version of the dependency - it's not critical and it'll probably still work if the version is 0.4.1 or 0.4.2. You can specify how flexible you want to be with versions using special symbols in the `package.json` file. but you want to specify what version is used. Here's a quick primer:
+You've installed a dependency to your app using npm, but you're not too precious about the version of the dependency - it's not critical and it'll probably still work if the version is 0.4.1 or 0.4.2. You can specify how flexible you want to be with versions using special symbols in the `package.json` file. but you want to specify what version is used. Here's a brief primer:
 
 | Symbol | Meaning | Example |
 |--|--|
