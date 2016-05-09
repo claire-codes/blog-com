@@ -54,7 +54,7 @@
         }
 
         .page-link {
-            font-family: 'Open Sans';
+            font-family: 'Droid Sans';
             font-weight: 700 !important;
             line-height: $base-line-height;
             letter-spacing: 0.05em;
@@ -76,7 +76,7 @@
         padding-bottom: 3em;
         margin: auto;
         font-size: 12px;
-        font-family: Open Sans;
+        font-family: 'Droid Serif';
         color: #959595;
     }
 
@@ -93,9 +93,11 @@
     .page-content {
         padding: $spacing-unit 0;
         /* text-align: justify; */
+        font-family: "Droid Serif";
     }
 
     .page-heading {
+        font-family: "Droid Sans";
         font-size: 20px;
         padding-top: 2px;
     }
@@ -115,9 +117,9 @@
     }
 
     .post-link {
-        font-family: 'Open Sans';
+        font-family: 'Droid Sans';
         font-weight: 300;
-        font-size: 1.5em;
+        font-size: 1.3em;
         letter-spacing: -1px;
         color: #454545;
         display: block;
@@ -142,6 +144,7 @@
     }
 
     .post-title {
+        font-family: "Droid Sans";
         font-size: 42px;
         letter-spacing: -1px;
         line-height: 1;
