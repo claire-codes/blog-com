@@ -1,6 +1,15 @@
-<div class="footer" align="center">
-<a href=https://instagram.com/flynner__><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;<a href=https://twitter.com/ClaireParkerPen><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;<a href=http://uk.linkedin.com/in/claireparker2><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;<a href=https://github.com/claireparker><i class="fa fa-github"></i></a><br />
-  Copyright &copy; Claire Parker 2015<BR />
-  Powered by <a href=http://jekyllrb.com target="_blank">Jekyll</a> using the <a href="https://github.com/diezcami/arctic-fox-theme" target="_blank">Arctic Fox</a> theme
-
-</div>
+<footer class="center">
+  <div class="measure">
+    <small>
+        <a href=https://instagram.com/flynner__><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;<a href=https://twitter.com/ClaireParkerPen><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;<a href=http://uk.linkedin.com/in/claireparker2><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;<a href=https://github.com/claireparker><i class="fa fa-github"></i></a><br />
+      Made with &lt;3 and lots of cups of tea by <a href="https://www.github.com/claireparker">Claire</a><br>
+      Powered by <a href=http://jekyllrb.com target="_blank">Jekyll</a> &lt;/&gt; based on the <a href="https://github.com/johnotander/pixyll">Pixyll theme</a>.
+    </small>
+  </div>
+</footer>
+{% if site.enable_anchorjs %}<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.0.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'always';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>{% endif %}
