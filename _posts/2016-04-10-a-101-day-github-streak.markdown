@@ -2,6 +2,7 @@
 layout: post
 title: A 101 day GitHub streak
 date: 2016-04-10 20:51:46
+summary: Or "how we spend our evenings in the Manchester suburbs".
 comments: true
 published: true
 categories:

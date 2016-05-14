@@ -2,6 +2,7 @@
 layout: post
 title: Selecting the last n elements in CSS
 date: 2016-04-16 16:25:27
+summary: There's a pseudo-class for that!
 comments: true
 published: true
 categories:

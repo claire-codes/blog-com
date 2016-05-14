@@ -2,6 +2,7 @@
 layout: post
 title: So you think you know how clear works?
 date: 2016-05-02 23:03:12
+summary: Of course you understand the `clear` property in CSS ... nah I didn't either.
 comments: true
 published: true
 categories:
