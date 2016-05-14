@@ -2,6 +2,7 @@
 layout: post
 title: How to chain functions in JavaScript
 date: 2016-04-26 20:21:04
+summary: Two examples of the chaining design pattern. Spoiler return `this`.
 comments: true
 published: true
 categories:
