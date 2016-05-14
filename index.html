@@ -7,7 +7,7 @@ layout: default
   <div>
     <p style="font-weight: 700">Showing <span id="displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</p>
     <p>Filter by category:</p>
-    <div style="line-height: 35px; font-family: 'Droid Sans'">
+    <div style="line-height: 35px;">
       {% for c in site.categories %}
       <input type="checkbox" data-category="{{c | first}}" id="{{c | first}}-check" onchange="displayFiltered()"/><label for="{{c | first}}-check">{{c | first}}</label>
       {% endfor %}
@@ -45,29 +45,30 @@ layout: default
   };
 
   var countDisplayed = function() {
-    document.getElementById('displayed').innerHTML = document.querySelectorAll('li.post-head.show').length;
+    document.getElementById('displayed').innerHTML = document.querySelectorAll('.post.py3.show').length;
   };
 
   var displayFiltered = function() {
     var itemsToShow = findSelectedItems();
     // Go through all li's and decide whether to show or hide depending on whether it's in the itemsToShow array
-    var allItems = document.querySelectorAll('li.post-head');
+    var allItems = document.querySelectorAll('.post.py3');
+    console.log(allItems);
     // if none are checked, show everything again
     if (itemsToShow.length == 0) {
       for (var l = 0; l < allItems.length; l++) {
-        allItems[l].className = "post-head show";
+        allItems[l].className = "post py3 show";
       }
     } else {
       for (var i = 0; i < allItems.length; i++) {
-        allItems[i].className = "post-head";
+        allItems[i].className = "post py3";
         // Account for items with more than one category
         types = allItems[i].getAttribute('data-categories').split(" ");
         for (var j = 0; j < types.length; j++) {
           if (itemsToShow.indexOf(types[j]) != -1) {
-            allItems[i].className = "post-head show";
+            allItems[i].className = "post py3 show";
             break;
           } else {
-            allItems[i].className = "post-head hide";
+            allItems[i].className = "post py3 hide";
           }
         }
       }
