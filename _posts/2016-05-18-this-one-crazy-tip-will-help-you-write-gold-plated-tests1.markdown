@@ -10,18 +10,27 @@ categories:
 - testing
 ---
 
-This is my tip to help you write better tests, be they unit or integration or functional or unicorn tests.
+Here is my top tip to help you write better tests, be they unit tests, integration tests, functional tests or unicorn tests:
 
-TDD is a three step process. You use the :vertical_traffic_light: traffic lights:
+Always write a failing test first.
 
-* :heart: Red: write a failing test
-* :yellow_heart: Amber: make the test pass
-* :green_heart: Green: improve the code you've just written, refactor
+There are three steps to TDD. You may have heard of the :vertical_traffic_light: traffic lights*:
 
-Or maybe red -> green -> refactor. My advice to you (even if you're writing your tests afterwards and not doing TDD) is never to skip the red test step.
+* :heart: __Red__: write a failing test
+* :yellow_heart: __Amber__: make the test pass
+* :green_heart: __Green__: improve the code you've just written, refactor
 
-Write a test for the feature you're about to implement, and then run it and watch it fail. Write the code to make it pass.
+Or maybe red test -> green test -> refactor**. I believe that this first step, to have red test, is important it you're following Test-Driven-Development and writing tests first, or whether you're writing tests after you've already implemented your feature.
 
-If you ever have a test that passes that surprises you, try and break to ensure the code you wrote or even the test itself does what you expect.
+The only way you can truly be sure that your code works is to use it to fix a broken test.
 
-Why do I recommend this? You might be writing the equivalent of `expect(true).toEqual(true)` in your tests, pointless. You might not have tested the feature you think you have. You might have written a lovely test case that doesn't do anything, or doesn't behave as you expect, but because your tests are green you think everything is OK. It's important while you're writing your tests to break them to double check everything is working as you expect.
+When you're getting cocky/confident in your testing ability, you may start writing one or more tests, run them against your code and watch them go green first time. This lulls you into a false sense of achievement, for all you know your code could be returning nulls and failing silently. Instead, you need to have a failing test first _and then_ fix it and commit it.
+
+I need an example to convince you.
+
+<!-- Why do I recommend this? You might be writing the equivalent of `expect(true).toEqual(true)` in your tests, pointless. You might not have tested the feature you think you have. You might have written a lovely test case that doesn't do anything, or doesn't behave as you expect, but because your tests are green you think everything is OK. It's important while you're writing your tests to break them to double check everything is working as you expect. -->
+
+In summary, break your tests! Then fix them and commit them.
+
+<sup>\* I have no reference for this, maybe I made it up.</sup>
+<sup>\** A red test is a failing one and a green test is a passing one, because that's the colours used by test runners to indicate this _everywhere_.</sup>
