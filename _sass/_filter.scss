@@ -1,21 +1,24 @@
-// input[type="checkbox"] {
-//     display: none;
-//     &:checked + label {
-//         background-color: $text-color;
-//         color: $background-color;
-//     }
-// }
-// label {
-//     cursor: pointer;
-//     border-radius: 3px;
-//     border: 1px solid $text-color;
-//     padding: 4px;
-//     margin: 1px;
-//     &:hover {
-//         background-color: lighten($text-color, 25%);
-//         color: $background-color;
-//     }
-// }
+input[type="checkbox"] {
+    display: none;
+    &:checked + label {
+        background-color: $light-gray;
+        color: $dark-gray;
+    }
+}
+.filter-row {
+    line-height: 30px;
+}
+label {
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid $dark-gray;
+    padding: 4px;
+    margin: 1px;
+    &:hover {
+        background-color: $mid-gray;
+        color: #fff;
+    }
+}
 .show {
     display: block !important;
 }
