@@ -9,22 +9,24 @@ layout: default
     <p>Filter by category:</p>
     <div class="filter-row">
       {% for c in site.categories %}
-      <input type="checkbox" data-category="{{c | first}}" id="{{c | first}}-check" onchange="displayFiltered()"/><label for="{{c | first}}-check">{{c | first}}</label>
+      <input type="checkbox" data-category="{{c | first}}" id="{{c | first}}-check" onchange="displayFiltered()"/><label itemprop="keywords" for="{{c | first}}-check">{{c | first}}</label>
       {% endfor %}
     </div>
   </div>
   <br />
 
-  <div class="posts">
+  <div class="posts" itemscope itemtype="http://schema.org/Blog">
     {% for post in site.posts %}
-      <div class="post py3" data-categories="{%for category in post.categories %}{{category}} {% endfor %}">
-          <p class="post-meta">
+      <div class="post py3" data-categories="{%for category in post.categories %}{{category}} {% endfor %}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          <p class="post-meta" itemprop="datePublished">
               {{ post.date | date: site.date_format }}        {%for category in post.categories %}
                         <span style="color: #454545;">/{{category}} </span>
                       {% endfor %}
           </p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <p class="post-summary">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link" itemprop="url">
+              <h3 class="h1 post-title" itemprop="name">{{ post.title }}</h3>
+          </a>
+          <p class="post-summary" itemprop="description">
             {{ post.summary }}
           </p>
         </div>

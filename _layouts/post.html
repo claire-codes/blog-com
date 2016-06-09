@@ -6,25 +6,26 @@ layout: default
 {% if minutes == 0 %}
 {% assign minutes = 1 %}
 {% endif %}
+<div itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="post-header mb2">
+      <h1 itemprop="name headline">{{ page.title }}</h1>
+      <span class="post-meta" itemprop="datePublished">{{ page.date | date: site.date_format }}</span><br>
+      <span class="post-meta">
+      {% if page.categories %}Posted in{% for c in page.categories %} <strong>/<span itemprop="keywords">{{c}}</span></strong>{% endfor %}{% endif %}</span><br />
+      <span class="post-meta small">
+      {% if page.minutes %}
+        {{ page.minutes }} {{ site.text.post.minute_read }}
+      {% else %}
+        {{ minutes }} {{ site.text.post.minute_read }}
+      {% endif %}
+      </span>
+    </div>
 
-<div class="post-header mb2">
-  <h1>{{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: site.date_format }}</span><br>
-  <span class="post-meta">
-  {% if page.categories %}Posted in{% for c in page.categories %} <strong>/{{c}}</strong>{% endfor %}{% endif %}</span><br />
-  <span class="post-meta small">
-  {% if page.minutes %}
-    {{ page.minutes }} {{ site.text.post.minute_read }}
-  {% else %}
-    {{ minutes }} {{ site.text.post.minute_read }}
-  {% endif %}
-  </span>
+    <article class="post-content" itemprop="articleBody">
+      {{ content }}
+    </article>
+
 </div>
-
-<article class="post-content">
-  {{ content }}
-</article>
-
 {% if site.show_sharing_icons %}
   {% include share_buttons.html %}
 {% endif %}
