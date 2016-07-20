@@ -20,7 +20,7 @@ I thought I understood the `clear` property in CSS, but it turns out I didn't.
 
 Take 3 divs. Let's float them side-by-side (excuse the pseudo-HTML):
 
-{% highlight html %}
+```html
 <style>
 .left {
     float: left;
@@ -29,17 +29,17 @@ Take 3 divs. Let's float them side-by-side (excuse the pseudo-HTML):
 <div class="left">ALPHA</div>
 <div class="left">BETA</div>
 <div class="left">GAMMA</div>
-{% endhighlight %}
+```
 
 They will now look something like this on the screen:
 
-{% highlight html %}
+```html
 ALPHABETAGAMMA
-{% endhighlight %}
+```
 
 Now let's clear BETA:
 
-{% highlight html %}
+```html
 <style>
 .left {
     float: left;
@@ -51,7 +51,7 @@ Now let's clear BETA:
 <div class="left">ALPHA</div>
 <div class="left cleared">BETA</div>
 <div class="left">GAMMA</div>
-{% endhighlight %}
+```
 
 How do expect the divs to display now? Think about it for a second before scrolling down ...
 
@@ -59,10 +59,10 @@ How do expect the divs to display now? Think about it for a second before scroll
 
 If you think that they will all be on different lines, then you're wrong! In fact, they now look like this:
 
-{% highlight html %}
+```html
 ALPHA
 BETAGAMMA
-{% endhighlight %}
+```
 
 Play along at home in JSBin or JSFiddle if you don't believe me. So why is this? The answer is given in the [MDN docs](https://developer.mozilla.org/en/docs/Web/CSS/clear):
 
@@ -72,7 +72,7 @@ See it? It's that word __precede__. Applying the clear property to an element me
 
 Why wouldn;t you know which side the preceding element is? Well, remember that 'preceding' looks different depending which direction you're floating in: let's float the boxes right and see what happens now:
 
-{% highlight html %}
+```html
 <style>
 .right {
     float: right;
@@ -89,6 +89,6 @@ Why wouldn;t you know which side the preceding element is? Well, remember that '
 
                  ALPHA
              GAMMABETA
-{% endhighlight %}
+```
 
 The order is due to the divs being floated right, and BETA still only cares about preceding elements, i.e. ALPHA. In the both examples, try changing `clear:both` to `clear: left` to get a clearer picture.

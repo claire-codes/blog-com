@@ -33,10 +33,10 @@ Now we know the name of the currently executing file, we can pass it to the `exp
 
 `expand_path` returns the absolute pathname of the file provided as an argument.
 
-{% highlight ruby %}
+```ruby
 File.expand_path(__FILE__)
   => "/Users/my/myDir/foo.rb"
-{% endhighlight %}
+```
 
 N.B. It can also take relative pathnames.
 
@@ -44,14 +44,14 @@ N.B. It can also take relative pathnames.
 
 If you aren't interested in the pathname and want the file's absolute directory without the filename, combine the previous method with the `dirname` method.
 
-{% highlight ruby %}
+```ruby
 File.dirname(File.expand_path(__FILE__))
 # Or also ...
 File.expand_path(File.dirname(__FILE__))
 # Or even ...
 File.dirname(File.realpath(__FILE__))
   => "/Users/my/myDir"
-{% endhighlight %}
+```
 
 ### But `__dir__`?
 
@@ -67,14 +67,14 @@ Well you might have tried `['a','b','c'].join('/')`, but you'd be wrong!
 
 What you really need is `File.join()`: this method concatenates arguments with a single slash, and will ensure that there is only one slash between each argument. You'd have to do this cleanup yourself if you used `.join('/')`
 
-{% highlight ruby %}
+```ruby
 File.join('a','b')      => 'a/b'
 File.join('a/','b')     => 'a/b'
 File.join('a/','/b')    => 'a/b'
 
 ['a/','b'].join('/')    => 'a//b'
 ['a/','/b'].join('/')   => 'a///b'
-{% endhighlight %}
+```
 
 ### `expand_path` bonus time!
 
@@ -86,14 +86,14 @@ So `File.expand_path('../lib', __FILE__)` gets the path to the lib directory _re
 
 Whip up a quick rb file and put the following:
 
-{% highlight ruby %}
+```ruby
 puts "__FILE__ = #{__FILE__}"
 puts "Absolute pathname = #{File.expand_path(__FILE__)}"
 puts "Absolute directory = #{File.dirname(File.expand_path(__FILE__))}"
 puts "Alternative absolute directory = #{File.expand_path(File.dirname(__FILE__))}"
 puts "Another absolute directory = #{File.dirname(File.realpath(__FILE__))}"
 puts "Working directory = #{Dir.pwd}"
-{% endhighlight %}
+```
 
 Execute and see you for yourself.
 

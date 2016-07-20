@@ -27,13 +27,13 @@ Start by renaming `./.git/hooks/commit-msg.sample` to `./.git/hooks/commit-msg`
 
 Edit the file using Vim or your favourite editor (remember it's in a hidden folder so you might have to do some jiggery pokery in your file explorer to see it - in Mac, when you're in the Open/Close dialog (which is not Finder) you can hit Cmd + Shift + . to view them). Delete everything that was already there and replace it with this:
 
-{% highlight bash %}
+```bash
 #!/bin/sh
 
 exec < /dev/tty
 
 .git/hooks/commit-msg-length.rb $1
-{% endhighlight %}
+```
 
 On the first line declared that this is a shell script. The second line made the output go somewhere. The third line executed the 'commit-msg-length' Ruby script and passed in the message file to it.
 

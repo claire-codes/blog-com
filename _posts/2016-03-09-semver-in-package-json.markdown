@@ -17,12 +17,12 @@ categories:
 
 You might have noticed some unexpected characters next to the package versions of the `dependencies` or `devDependencies` properties in your `package.json` file:
 
-{% highlight javascript %}
+```javascript
 "dependencies": {
   "backbone": "^1.3.1",
   "express": "~4.13.4"
 }
-{% endhighlight %}
+```
 
 ## Semver
 
@@ -67,11 +67,11 @@ If you really want to lock down the dependency versions in your package.json, co
 
 Is dead easy. Replace `type` with `patch`, `minor` or `major`:
 
-{% highlight bash %}
+```bash
 npm version type -m 'Version %s'
 git push && git push --tags
 npm publish
-{% endhighlight %}
+```
 
 ## References
 

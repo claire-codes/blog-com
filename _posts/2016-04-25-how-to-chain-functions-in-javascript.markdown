@@ -13,7 +13,7 @@ The chaining design pattern is lovely. :sunrise: It means we can call several ob
 
 Instead of several repetitive lines (A) we have a cleaner one-liner (B) :cake::
 
-{% highlight javascript %}
+```javascript
 // (A)
 let sponge = new Cake();
 sponge.mix();
@@ -22,7 +22,7 @@ sponge.eat();
 
 // (B)
 let sponge = new Cake().mix().bake().eat();
-{% endhighlight %}
+```
 
 
 ## But how?
@@ -38,7 +38,7 @@ Our object contains an internal property that we'll modify with our chianed meth
 
 Create an object in the usual way. Include an internal variable you'll be amending as well as all your functions.
 
-{% highlight javascript %}
+```javascript
 let chainObj = {
     phrase: "",
 
@@ -72,13 +72,13 @@ let chainObj = {
 // Example usage:
 let chainFoo = chainObj.setPhrase("foo").makeItRed().shoutIt().val();
 // "RED FOO"
-{% endhighlight %}
+```
 
 ## 2. Use a prototype
 
 The thought of using a prototype frighten me a bit. But this approach is still valid.
 
-{% highlight javascript %}
+```javascript
 // Define the internal property to modify
 let ChainPrototype = function() {
     this.phrase = "";
@@ -108,6 +108,6 @@ ChainPrototype.prototype.shoutIt = function() {
 //+we'll just call the property directly
 let chainFoo = new ChainPrototype.setPhrase('foo').makeItRed().shoutIt().phrase;
 // 'RED FOO'
-{% endhighlight %}
+```
 
 In summary: make an object, make the methods, make them all return `this`. Boom. :facepunch::boom:

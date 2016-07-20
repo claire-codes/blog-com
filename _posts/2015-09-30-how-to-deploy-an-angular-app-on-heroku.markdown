@@ -19,7 +19,7 @@ When googling deploying an AngularJS app to Heroku, all the tutorials I looked a
 
 Let's say you've got your Angular app and the project structure looks a bit like this:
 
-{% highlight console %}
+```bash
 root
 │   README.md
 │   index.html   
@@ -32,7 +32,7 @@ root
 │   
 └───css
     │   styles.css
-{% endhighlight %}
+```
 
 No, I am not telling you how to write an Angular app.
 
@@ -44,21 +44,21 @@ Navigate to the root folder of your project in the terminal. If you haven't alre
 
 Install Express from the command line (the `-g` installs it globally on your machine). We're using [Express](http://expressjs.com/) for routing.
 
-{% highlight console %}
+```bash
 npm install -g express
-{% endhighlight %}
+```
 
 Next make a `package.json` file for the app. From the command line, type the following command and answer the questions.
 
-{% highlight console %}
+```bash
 npm init
-{% endhighlight %}
+```
 
 Use the `npm init` command because it does it interactively for you and because you're lazy. You can't go wrong with your answers - if in doubt accept the default.
 
 Add a couple more properties to the file so that Heroku will know exactly how to run your app:
 
-{% highlight javascript %}
+```javascript
   "dependencies": {
     "ejs": "^2.3.1",
     "express": "~4.9.x"
@@ -66,17 +66,17 @@ Add a couple more properties to the file so that Heroku will know exactly how to
   "engines": {
     "node": "0.12.2"
   }
-{% endhighlight %}
+```
 
 A `package.json` file contains lots of metadata about your Node app. Install all the stuff that it specifies to your machine by running from the command line:
 
-{% highlight console %}
+```bash
 npm install
-{% endhighlight %}
+```
 
 Now you need a file which defines your project routes. Create a file called `app.js` and copy the following text:
 
-{% highlight javascript linenos %}
+```javascript
 var express = require('express');
 var path = require('path');
 var app = express();
@@ -87,7 +87,7 @@ app.get('/', function (req, res) {
 
 app.use(express.static(__dirname)); // set static files location, in this case the route, add a file name if not
 app.listen(process.env.PORT || 3000);
-{% endhighlight %}
+```
 
 We've set up the root route (not a typo), which returns the view we want to use. It's important to use the notation on line 6 instead of an absolute pathname: see [this StackOverflow question](http://stackoverflow.com/questions/25463423/res-sendfile-absolute-path) for why.
 
@@ -97,34 +97,34 @@ Heroku needs a Procfile to correctly run your app.
 
 Make a new file in your project's root called `Procfile` and enter the line:
 
-{% highlight console %}
+```bash
 web: node app.js
-{% endhighlight %}
+```
 
 Now you just need to set up version control and we're good to go. From the command line, run the following commands:
 
-{% highlight console %}
+```bash
 git init
 heroku create
 git add .
 git commit -m 'First commit'
 git push heroku master
-{% endhighlight %}
+```
 
 You've initialised the directory as a Git project, created a Heroku project which will also have added it to your git remotes, then committed and pushed your work to Heroku.
 
 If you want to test the app out locally before pushing to Heroku, test it out locally with the command:
 
-{% highlight console %}
+```bash
 heroku local web
-{% endhighlight %}
+```
 
 If it's not working, run `heroku logs` and solve the problem with Google's help. What, I'm not holding your hand all the way through am I??
 
 Finally, view your app on Heroku and bask in all it's deployed glory.
 
-{% highlight console %}
+```bash
 heroku open
-{% endhighlight %}
+```
 
 Of course you could use this handy tutorial to set this up but it's not as fun for me that way! [www.devcenter.heroku.com/articles/getting-started-with-nodejs#introduction](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

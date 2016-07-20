@@ -36,7 +36,7 @@ When you're coding, experiment and break the code examples: what happens if you 
 
 Go over what you've written once it works and see if you can improve it. For example, can you make the variable names more semantic and descriptive? Can your comments be more helpful?
 
-{% highlight javascript %}
+```javascript
 // bad
 function convert(x) {
   y = x * 2.2;
@@ -46,7 +46,7 @@ function convert(x) {
 function kilosToPounds(kilos) {
   return kilos * 2.2;
 }
-{% endhighlight %}
+```
 
 Could you use a map or apply function instead of a for-loop? Could you make your web app load faster if you minified your resources or didn't use a CDN for that font? _Do you even need jQuery??_
 

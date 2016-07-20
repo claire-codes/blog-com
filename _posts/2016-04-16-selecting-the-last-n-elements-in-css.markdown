@@ -11,14 +11,14 @@ categories:
 
 Let's a take a bog-standard list: :toilet::clipboard:
 
-{% highlight html %}
+```html
 <ul>
     <li>Doris Lessing</li>
     <li>Angela Carter</li>
     <li>Ann Patchett</li>
     <li>Iris Murdoch</li>
 </ul>
-{% endhighlight %}
+```
 
 Quick, off the top of your head: :older_man:
 

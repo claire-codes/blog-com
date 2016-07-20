@@ -16,9 +16,9 @@ Are you one of those mugs :coffee: still downloading zip files of libraries for 
 
 Using [Backbone](http://backbonejs.org/)? Alright then, just do
 
-{% highlight bash %}
+```bash
 npm install backbone -S
-{% endhighlight %}
+```
 
 So now you've got a new folder called `node_modules` and a subdirectory called `backbone`, where a bunch of Backbone.js related code lives. This means that all you need to do to use it is point your script tag to this directory, e.g. `<script src="../node_modules/backbone/backbone.js"></script>`. And if you're running a node application all you need to do is stick `require("backbone")` in you `.js` files. Look how quick and easy that was!
 
@@ -26,9 +26,9 @@ That `-S` flag means that as well as installing the module, you're also putting 
 
 That was so fun, let's do another one. How about writing some tests with [Mocha](https://mochajs.org/) and [Chai](http://chaijs.com/)?
 
-{% highlight bash %}
+```bash
 npm install mocha -D
-{% endhighlight %}
+```
 
 There's now another subdirectory alongside `backbone` in `node_modules` containing all the mocha code. Again, call it using a script tag, for example in your test runner file, or using the `require()` keyword for a node app.
 
@@ -36,9 +36,9 @@ The `-D` flag means save it in the `package.json` file, but this time in the `de
 
 I'm getting tired now, let's save some keystrokes on this one:
 
-{% highlight bash %}
+```bash
 npm i chai -D
-{% endhighlight %}
+```
 
 Boom! `i` is just an alias for `install`. Look at you, you poweruser! :relaxed: :grin:
 

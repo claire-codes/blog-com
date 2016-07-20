@@ -18,13 +18,13 @@ categories:
 
 Do you notice anything with this object?
 
-{% highlight javascript %}
+```javascript
 {
     cat: "miaow",
     dog: "woof",
     frog: "ribbit",
 }
-{% endhighlight %}
+```
 
 Maybe that trailing comma after "ribbit" strikes you as a bit off. Maybe the neat-freak coder inside you who loves linting wants to backspace the heck out of it :bomb: Or maybe you were too busy adding and removing properties from your object to care.
 
@@ -38,12 +38,12 @@ This style can be considered safer, as it protects you from irritating syntax er
 
 JSON Object !== JavaScript object, and if you try to parse a JavaScript object with a trailing comma it'll choke.
 
-{% highlight javascript %}
+```javascript
 JSON.parse('{ "cat": "miaow", "dog": "woof", "frog": "ribbit" }');
 // This is valid
 JSON.parse('{ "cat": "miaow", "dog": "woof", "frog": "ribbit", }');
 // Uncaught SyntaxError: Unexpected token } in JSON
-{% endhighlight %}
+```
 
 (Don't forget to double quote your keys too! :grin:)
 
@@ -51,15 +51,15 @@ JSON.parse('{ "cat": "miaow", "dog": "woof", "frog": "ribbit", }');
 
 Arrays can also handle trailing commas:
 
-{% highlight javascript %}
+```javascript
 ['bish','bash','bosh',]     // .length = 3
-{% endhighlight %}
+```
 
 However don't be too liberal with those commas in case you accidentally create blank holes in the array where you don't want them:
 
-{% highlight javascript %}
+```javascript
 ['bish','bash','bosh',,]     // .length = 4
-{% endhighlight %}
+```
 
 ### Yours sincerely,
 

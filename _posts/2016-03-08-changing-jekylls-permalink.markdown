@@ -18,15 +18,15 @@ In your Jekyll blog, a _permalink_ is the name for the URL that points directly 
 
 Jekyll uses a really ugly, verbose permalink format by default which includes the date and category of the post:
 
-{% highlight bash %}
+```bash
 /:categories/:year/:month/:day/:title.html
-{% endhighlight %}
+```
 
 Which in the live site for this post would become:
 
-{% highlight bash %}
+```bash
 http://www.claireparker-pen.com/ruby/2016/03/08/changing-jekylls-permalink.html
-{% endhighlight %}
+```
 
 Why do you want all that extra info in your permalink? In my opinion all that's needed is the title to uniquely identify it, and this should also be snappy and to the point (a rule I admittedly don't always follow.). Any metadata such data or category should already be clearly included in the blog post itself.
 
@@ -34,15 +34,15 @@ Why do you want all that extra info in your permalink? In my opinion all that's 
 
 In the `_config.yml` file, either edit the `permalink` property or add it if it isn't already there. The pattern you provide creates the structure of your permalinks. You can use certain variables that Jekyll recognises that represent metadata for the post. For example, I've got:
 
-{% highlight bash %}
+```bash
 permalink: /blog/:title
-{% endhighlight %}
+```
 
 The `:title` will map to the title of my blog post as taken from its filename and create a permalink that looks something like
 
-{% highlight bash %}
+```bash
 http://www.claireparker-pen.com/blog/changing-jekyll-permalinks
-{% endhighlight %}
+```
 
 You can find the other variables that Jekyll supports listed in [Jekyll's docs](https://jekyllrb.com/docs/permalinks/). Spoiler: there aren't any interesting ones except for `:title`.
 

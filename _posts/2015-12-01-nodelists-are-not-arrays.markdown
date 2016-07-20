@@ -12,27 +12,27 @@ When you're working with the DOM, it's tempting to think that when you select a 
 
 Try this in your browser console:
 
-{% highlight console %}
+```bash
 > var whoami = document.querySelectorAll('div');
 > Object.getPrototypeOf(whoami)
 NodeList {}
-{% endhighlight %}
+```
 
 Compare this with:
 
-{% highlight console %}
+```bash
 > var standardArray = [1,2,3];
 > Object.getPrototypeOf(standardArray);
 Array {}
-{% endhighlight %}
+```
 
 The `Object.getPrototypeOf()` method returns the next object in the prototype chain, i.e. the object your current variable directly inherited all it's methods and properties from. You can call this method repeatedly to reach Object (everything inherits from Object) and finally null. So this gives two prototype chains that look like:
 
-{% highlight console %}
+```bash
 whoami -> NodeList.prototype -> Object.prototype -> null
 
 standardArray -> Array.prototype -> Object.prototype -> null
-{% endhighlight %}
+```
 
 NodeLists have nothing to do with arrays in JavaScript, and this means that you can't use any of the lovely array methods like filter and map and even forEach loops on them. If you want to do anything to a NodeList you'll need to use a standard for-loop.
 
@@ -47,29 +47,29 @@ A NodeList is a collection of HTML nodes. There's only a few useful things you c
 
 You can combine both these magical methods to iterate using a boring old for-loop.
 
-{% highlight javascript %}
+```javascript
 for (var i=0; i < whoami.length; i++) {
    console.log(whoami[i]);
 }
-{% endhighlight %}
+```
 
 ### Workarounds
 
 All is not lost though. Simply convert the NodeList to an array and you can use all whizzy Array.prototype methods you like.
 
-{% highlight javascript %}
+```javascript
 var pseudoArrayThing = Array.prototype.slice.call(whoami);
 // or
 var otherArrayThing = Array.from(whoami);
-{% endhighlight %}
+```
 
 ### ES6 Workarounds
 
 Convert to an array using the spread operator.
 
-{% highlight javascript %}
+```javascript
 var spreadArrayThing = [...whoami];
-{% endhighlight %}
+```
 
 #### P.S.
 

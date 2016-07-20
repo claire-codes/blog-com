@@ -9,7 +9,7 @@ published: true
 ---
 How do you use CSS to style a particular element differently from other similar elements? You'd stick a class or ID on it, like so:
 
-{% highlight html %}
+```html
 <style>
 .special {
     color: red;
@@ -21,7 +21,7 @@ How do you use CSS to style a particular element differently from other similar 
 <p class="special">Special</p>
 <p>Normal</p>
 <p>Normal</p>
-{% endhighlight %}
+```
 
 <style>
 .code-example, .code-example-two {
@@ -49,7 +49,7 @@ But what if you have the opposite problem - you want to _exclude_ an element fro
 
 Maybe you'd try and override your styling with another class, but why not use the handy `:not()` CSS pseudo-class instead:
 
-{% highlight html %}
+```html
 <style>
 p:not(.special) {
     color: red;
@@ -61,7 +61,7 @@ p:not(.special) {
 <p class="special">Special</p>
 <p>Normal</p>
 <p>Normal</p>
-{% endhighlight %}
+```
 
 <style>
 .code-example-two p:not(.special) {
