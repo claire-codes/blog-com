@@ -4,14 +4,15 @@ title: Super quick Regex TDD setup
 summary: When setting up a test harness is this quick there&#39;s no excuse for not doing TDD. Plus regexes!
 date: 2016-08-13 20:25:22
 comments: true
-published: false
+published: true
 categories:
 - javascript
+- testing
 ---
 
-When you need to test out a regex you could either (A) hack around in the console, getting confused and lost, or instead (B) write some tests: you can rerun them and your regex is documented for future use 🏆
+When you need to build a regex you could either (A) hack around in the console, getting confused and lost, or instead (B) write some tests: you can use them to work out all the things your regex should match (and shouldn't match), easily run them to see results, plus your regex is documented for future use 🏆
 
-This post shows you how quick and painless that can be to setup - can't help you buiding your regex though!
+This post shows you how quick and painless that can be to setup. Want to get started with Test-Driven-Development (TDD)? Spend the next 5 minutes getting a working example!
 
 ### `mkdir regexTest && cd "$_"`
 
