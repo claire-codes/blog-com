@@ -10,21 +10,23 @@ categories:
 - testing
 ---
 
-When you need to build a regex you could either (A) hack around in the console, getting confused and lost, or instead (B) write some tests: you can use them to work out all the things your regex should match (and shouldn't match), easily run them to see results, plus your regex is documented for future use 🏆
+When you need to build a regex you could either (A) hack around in the console, getting confused and lost, or instead (B) use TDD and write some tests: you can have a clear list of strings your regex should match and those it shouldn't, run them quickly and see whether the regex works and have readymade documentation for future use 🏆
 
-This post shows you how quick and painless that can be to setup. Want to get started with Test-Driven-Development (TDD)? Spend the next 5 minutes getting a working example!
+But how do you set that up? If it sounds like a lot of work, it isn't. Follow this post and in five minutes you'll have a working example. :clock1:
 
-### `mkdir regexTest && cd "$_"`
+Open up the terminal and follow along:
+
+### `$ mkdir regexTest && cd "$_"`
 
 Make new directory and move into it in one command!
 
-### `npm init -y`
+### `$ npm init -y`
 
 Set up a new `package.json` file the quick way - no more hitting enter for all the default options!
 
-### `npm i -D mocha chai`
+### `$ npm i -D mocha chai`
 
-Install the latest versions of the `mocha` and `chai` packages as devDependencies (although it doesn't really matter if they're devDependencies or normal dependencies as we're not really creating a  production ready app. The save as a straight dependency use the `-S` shortcut).
+Install the latest versions of the `mocha` and `chai` packages as devDependencies (although it doesn't really matter if they're devDependencies or normal dependencies as we're not really creating a  production ready app. To save as a regular `dependency` use the `-S` shortcut instead).
 
 You should now have something like:
 
@@ -47,7 +49,7 @@ You should now have something like:
 }
 ```
 
-Change the `test` property to:
+Using you favourite text editor, change the `test` property to:
 
 ### `"test": "./node_modules/.bin/mocha -R spec"`
 
@@ -55,11 +57,11 @@ If you have mocha installed globally (`npm i -g mocha`) you can just write `moch
 
 The `-R` flag is short for `--reporter` and tells mocha which one we want to use, i.e. how to print out our test results. Here we're using the default `spec` but replace this with `-R nyan` if you want something a bit more fun.
 
-We'll now be able to run the tests with `npm test`. Let's write some to run! Go back to the command line.
+We'll now be able to run the tests with `npm test`. Let's write some to run! From the command line:
 
-### `mkdir test`
+### `$ mkdir test`
 
-### `touch test/regexTest.js`
+### `$ touch test/regexTest.js`
 
 Mocha wants to run tests that are in the `test` directory but isn't bothered what the files in it are called. You could have `regexSpec.js` or `wazzock.js` if you like.
 
@@ -81,16 +83,16 @@ describe("My amazing regex", function() {
 
 Now run from the command line:
 
-### `npm test`
+### `$ npm test`
 
 And tada :tada: you should see some working specs:
 
-![My First Specs](/assets/firstspecs.png)
+![My First Specs](/assets/passingspecs.png)
 
 
-There's no time for an explanation of how Mocha works, but a couple of notes: I prefer the expect rather than assert matchers as I think they are more readable. I'm using the `chai` matchers to make our assertions even easier to read. Plus we're going to group lots of assertions within the `it` functions because life is too short to write a new one for each assertion, especially as this is just a quick example.
+An explanation of how Mocha works is beyond the scope of this post, but a couple of notes: I prefer the "expect" style assertions rather than the BDD "assert" form as I think they are more readable. I'm using the `chai` matchers library to make our expectations even easier to read. Plus we're going to group lots of expectations within the `it` functions because life is too short to write a new one for each expectation, especially as this is just a quick example.
 
-Now we can set up some assertions to test a regex. Use this matcher:
+Now we can set up some expectations to test a regex. Use this matcher structure:
 
 ### `expect("string").to.match(regex);`
 
@@ -104,7 +106,7 @@ describe("My amazing regex", function() {
         expect("light").to.match(myRegex);
         expect("highlight").to.match(myRegex);
         expect("lighten").to.match(myRegex);
-        expect("reenlighten").to.match(myRegex);
+        expect("reenlighten").to.match(myRegex); // I made this word up 🙊
         expect(" light ").to.match(myRegex);
     });
 
@@ -120,17 +122,19 @@ describe("My amazing regex", function() {
 
 Note that we'll add a variable to hold the regex but we won't fill it in correctly just yet, because first, we want failing specs! Run `npm test` again:
 
-![My First Specs](/assets/failingspecs.png)
+![Passing Specs](/assets/failingspecs.png)
 
-Well OK, the `shouldn't work` block is passing, as our regex is wrong and won't match any of them, which we expect. We use those assertions as our safety net - when we start to write our regex if some of these match then we know we need to fix something in our implementation.
+Well OK, the `shouldn't work` block is passing, as our regex is wrong and won't match any of them, which we expect. We use those assertions as our safety net - when we start to write our regex properly, if some of these match then we know the regex is wrong.
 
-And then all is left is to write a regex that makes all of the tests pass: some strings are matched and others aren't.
+And then all is left is to write a regex that makes all of the tests pass: some strings are matched and others aren't. Spolier alert:
 
 ```javascript
 var myRegex = /^(?!en).*light(?!er)/;
 ```
 
-![My First Specs](/assets/passingspecs.png)
+Each time you make a change to the regular expression, save and rerun the test command from the terminal. `npm test`:
+
+![Final Specs](/assets/passingspecs.png)
 
 And that's all there is to it.
 
