@@ -21,6 +21,7 @@ exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile']
 
 gems:
   - jemoji
+  - jekyll-sitemap
   
 # Post sharing icons
 show_sharing_icons: false
