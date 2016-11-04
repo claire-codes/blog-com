@@ -4,3 +4,4 @@ _site
 _posts/*review*
 _posts/drafts/
 ignore/
+node_modules/

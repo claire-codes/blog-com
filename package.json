@@ -1,0 +1,18 @@
+{
+  "name": "jekyllBlog",
+  "version": "1.0.0",
+  "description": "If you haven't got anything constructive to say about my blog, then go look in the mirror. Your hair looks _awful_ today.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Claire Parker <claire.parker87@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-uglify": "^2.0.0"
+  }
+}
