@@ -1,17 +1,17 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
-    cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache');
+    cache = require('gulp-cache'),
+    uglifycss = require('gulp-uglifycss');
     
-gulp.task('styles', function() {
-    gulp.src('css/pixyll.scss')
+gulp.task('css', function() {
+    gulp.src('scss/pixyll.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('css/'))
         .pipe(rename({suffix: '.min'}))
-        .pipe(cssnano())
+        .pipe(uglifycss())
         .pipe(gulp.dest('css/'));
 });
 
@@ -22,5 +22,5 @@ gulp.task('images', function() {
 });
 
 gulp.task('default', [], function() {
-    gulp.start('styles', 'images');
+    gulp.start('css', 'images');
 });
