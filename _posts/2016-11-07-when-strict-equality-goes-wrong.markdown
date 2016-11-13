@@ -23,17 +23,17 @@ function makeFizzbobs (widget) {
 }
 ```
 
-I could imagine what the author of the code thought they were doing: they were guarding against an empty function parameter right? And they were getting extra brownie points by using the triple equals strict equality, because that's what all that linting software tells you to use. So yeah. Works as expected.
+I could imagine what the author of the code thought they were doing: they were guarding against an empty function parameter right? Cos null sounds like what you'd be left with if the user didn't supply an argument like `floop` or `321`. And all this linting software tells you to use triple equals instead of doubles so it must be right? User passes something in: carry on with the function, user doesn't pass something to the function: we return an empty object. Job done.
 
 🚨 No.
 
-What happens when you call this function with an empty parameter then?
+This is what actually happens:
 
 ```javascript
 makeFizzbobs(); // 42
 ```
 
-Oh. So an empty argument isn't the same thing as `null`? 🤔 No. No it's not. Let's try some other parameters.
+Oh. So an empty argument isn't the same thing as `null`? 🤔 No. No it's not. Well what about an empty string, or maybe that `undefined` value, that sounds empty:
 
 ```javascript
 makeFizzbobs(''); // 42
@@ -42,11 +42,30 @@ makeFizzbobs(false); // 42
 makeFizzbobs(null); // {}
 ```
 
-Hmm ... only null strictly equals null then, or `null === null`. So how can we fix this function to guard against an empty argument? We can check for a falsey.
+So it turns out that null only strictly equals itself, or `null === null`. Unsurprisingly, `null !== undefined` or any of the other values we tried above.
 
-_You can play along at home by whipping up some quick unit tests like I outlined [in my other blog post](/blog/super-quick-regex-tdd-setup). Define a quick function in the test file to write some test cases._
+In fact, when you call the method with no arguments, `widget` gets the value `undefined` (add a `console.log(widget)` in the method to see for yourself). So how can we fix this function to guard against an empty argument? We could change the check in the if-statement from `null` to `undefined`, but then we'll let `null`s through instead.
 
-Personally, I would short-circuit the function execution by checking for a falsey. If we expect an argument to the function and none is passed in, this will evaluate to a falsey:
+Maybe you'd think that we could have a long if-clause, like:
+
+```javascript
+if (widget === null || widget === undefined || widget === ... ) {
+```
+
+But there is a better way!
+
+_You can play along at home by whipping up some quick unit tests like I outlined [in my other blog post](/blog/super-quick-regex-tdd-setup). Define the `makeFizzbobs` function at the top of the test file and write some test cases._
+
+Personally, I would short-circuit the function execution by checking for a falsey. There are 6 falsey values in JavaScript, and it's likely that you aren't interested in any of them:
+
+- false
+- NaN
+- 0
+- undefined
+- null
+- ''
+
+A falsey evaluates to `false` in an if-clause, which we can use like so:
 
 ```javascript
 function makeFizzbobs (widget) {
@@ -59,19 +78,9 @@ function makeFizzbobs (widget) {
 }
 ```
 
-I've swapped the "order" round, I'm checking for `widget` rather than `!widget`, which I think is a little clearer to understand rather than having to reverse the logic in your head with the presence of a `!` (I'm lazy, so what 😴).
+You may notice that I've swapped the order around, so I'm dealing with desirable input first and then the falsey is dealt with in the `else` clause. This is because I think the if-clause reads a little clearer and is easier to comprehend this way, rather than having to reverse the logic in your head to work out what `!widget` means (I'm lazy, so what 😴).
 
-What this means is that anything that isn't a truthy values that's passed in as `widget` will result in an empty object `{}` being returned. And what are the falsey values?
-
-
-- false
-- NaN
-- 0
-- undefined
-- null
-- ''
-
-So now the function works as expected:
+So now the function works like:
 
 ```javascript
 makeFizzbobs(); // {}
@@ -81,4 +90,4 @@ makeFizzbobs(123); // 42
 makeFizzbobs('abc'); // 42
 ```
 
-This doesn't cover every situation - perhaps you really don't want an empty array passed in, or `Infinity`, or the string `"flibbertigibbet"`, in which case you'll need an extra clause in your if-statement, but it's a good place to start in JavaScript's loosely-typed Wild West.
+Of course, this may not be suitable for your needs: perhaps you want to do something really interesting with an empty string `''` or you just want to deal with `0` like any other number, or perhaps you really don't want an empty array passed in, or `Infinity`, or the string `"flibbertigibbet"`, but this is a good place to start in JavaScript's loosely typed Wild West, and a good reminder that things are never what they seem with type checking in JavaScript.
