@@ -26,4 +26,9 @@ footer {
   font-weight: $footer-font-weight;
   padding: $footer-padding;
   text-align: center;
+
+  .fa {
+      font-size: 30px;
+      margin-right: 10px;
+  }
 }
