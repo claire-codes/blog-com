@@ -729,6 +729,7 @@ pre a::before {
   font-size: 13px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
@@ -892,6 +893,9 @@ sup {
 .site-header .site-nav {
   text-align: center; }
 
+.site-header .fa {
+  font-size: 30px; }
+
 /*
   Table styles copied from Bootstrap
   Copyright (c) 2013 Twitter, Inc
@@ -999,6 +1003,8 @@ footer {
   footer .fa {
     font-size: 30px;
     margin-right: 10px; }
+  footer .social-icons-left {
+    text-align: center; }
 
 .social-icons-left, .social-icons-right {
   text-align: center;
