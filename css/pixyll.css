@@ -1018,14 +1018,13 @@ footer {
 .social-icons a.fa {
   cursor: pointer;
   opacity: 0.8;
-  padding: 0.2em; }
+  padding: 0.2em;
+  color: #0076df; }
+  .social-icons a.fa:hover {
+    color: #00369f; }
 
 .social-icons a.fa:hover {
   opacity: 1; }
-
-.social-icons iframe[title=Flattr] {
-  position: relative;
-  top: 0.1em; }
 
 blockquote {
   border-left: 5px solid #7a7a7a;
@@ -1120,12 +1119,9 @@ blockquote footer {
     max-width: 56rem;
     margin-left: -7em; } }
 
-.gist,
-.gist .highlight .p {
-  font-size: .75rem; }
-
-.gist .lines {
-  width: 100%; }
+.it-me {
+  text-align: center;
+  font-style: italic; }
 
 .measure {
   margin: 0 auto;
