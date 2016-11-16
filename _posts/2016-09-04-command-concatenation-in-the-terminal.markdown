@@ -36,14 +36,14 @@ But this is not the only way to chain commands 😮 You can also use semi-colons
 $ alpha() && beta()
 # beta() only executes if alpha() is successful
 
-$ alpha(); beta() 
+$ alpha(); beta()
 # beta() executes even if alpha() fails
 ```
 
 What's the difference between a successful and unsuccessful command in *nix? The exit code of course!
 
-* `0` exit code = good :heavy_check_mark:
-* `1` or higher exit code = bad :heavy_multiplication_x:
+* `0` exit code = good ✔️
+* `1` or higher exit code = bad ✖️
 
 An exit code of anything greater than `0` means your command failed.
 

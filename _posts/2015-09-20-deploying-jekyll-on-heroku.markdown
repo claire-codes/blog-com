@@ -10,7 +10,7 @@ categories:
 
 # How I deployed my Jekyll blog to Heroku step-by-step
 
-If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours. :apple::green_apple:
+If you use Jekyll for your blog you'll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I'd used Heroku previously and I knew I wouldn't be restricted in my choice of plug-ins further down the line. Alas, I didn't find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn't run for me! But as you can tell, the story had a happy ending and you are reading the fruit of my labours. 🍎🍏
 
 Here's a guide to the Hows & Whys. You should be able to follow along as long as you're happy with the command line.
 
@@ -66,7 +66,7 @@ use Rack::TryStatic,
 run Rack::NotFound.new('_site/404.html')
 ```
 
-Jekyll will have already made an `index.html` file for us, but doesn't give a 404 automatically. Create a file called `404.html` and put some valid HTML in it - just copy the index page's contents if you like for now. Run `jekyll serve` to make sure this page is generated and placed in your `_site` folder. Once it's running locally hit `Ctrl-C` to stop it running and continue following this tutorial :stuck_out_tongue_winking_eye:
+Jekyll will have already made an `index.html` file for us, but doesn't give a 404 automatically. Create a file called `404.html` and put some valid HTML in it - just copy the index page's contents if you like for now. Run `jekyll serve` to make sure this page is generated and placed in your `_site` folder. Once it's running locally hit `Ctrl-C` to stop it running and continue following this tutorial 😜
 
 You need to put some extra stuff in the `_config.yml` file, particularly `vendor` so that Jekyll doesn't get confused when it generates your site and looks in the wrong place for stuff. Add this line to the bottom:
 

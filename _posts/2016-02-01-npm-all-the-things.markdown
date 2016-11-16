@@ -6,7 +6,7 @@ comments: true
 categories: javascript
 ---
 
-Are you one of those mugs :coffee: still downloading zip files of libraries for their JavaScript projects? Well you don't have to be! Leverage the power of the command line today and `npm` that thing!
+Are you one of those mugs ☕️ still downloading zip files of libraries for their JavaScript projects? Well you don't have to be! Leverage the power of the command line today and `npm` that thing!
 
 [npm](https://www.npmjs.com/) is Node's Package Manager (how did they come up with that name??) and I am having great fun with it at the moment - packaging, modularising and managing my JavaScript project dependencies with minimal pain.
 
@@ -40,17 +40,17 @@ I'm getting tired now, let's save some keystrokes on this one:
 npm i chai -D
 ```
 
-Boom! `i` is just an alias for `install`. Look at you, you poweruser! :relaxed: :grin:
+Boom! `i` is just an alias for `install`. Look at you, you poweruser! 😌 😁
 
 ### Gotcha
 
-But there's always an exception. Say you've got a module like `sinon` which is split into separate modules in separate files and all loaded into the main `sinon.js` file using `require`s: you won't be able to use this within a plain old script tag as the `require`s won't work (no node!). Instead you want to reference single concatenated and/or minified files. This means you _might_ have to download a library from the Internet like in the olden days. :fax:
+But there's always an exception. Say you've got a module like `sinon` which is split into separate modules in separate files and all loaded into the main `sinon.js` file using `require`s: you won't be able to use this within a plain old script tag as the `require`s won't work (no node!). Instead you want to reference single concatenated and/or minified files. This means you _might_ have to download a library from the Internet like in the olden days. 📠
 
 ## But npm is still great!
 
 Is there any code that _you_ could make into a package for easy reuse? Never written a node module before? [This is hands down the best tutorial there is](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738#.y9pim429g).
 
-Here's some package inspiration :gift:
+Here's some package inspiration 🎁
 
 * How about using it to store code you find yourself writing time and time again? Like utility functions? Or custom test matchers?
 * The [todomvc examples](http://todomvc.com/) examples (well, [Backbone](https://github.com/tastejs/todomvc/tree/gh-pages/examples/backbone) is the only one I've looked at properly so far) use a module _just to store the CSS_. What reusable data could you store in a package?

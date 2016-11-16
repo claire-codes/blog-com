@@ -9,7 +9,7 @@ categories:
 ---
 
 <div class="tldr">
-    <h2>:mag: TL;DR :mag_right:</h2>
+    <h2>🔎 TL;DR 🔍</h2>
     <ul>
         <li>Terminology used by Jasmine, Sinon and other testing frameworks is not the same: one person's spy is another person's stub</li>
         <li>The equivalent of Sinon's <code>sinon.spy(foo,'bar')</code> in Jasmine is <code>spyOn(foo,'bar').and.callThrough()</code></li>
@@ -52,9 +52,9 @@ Sinon's API makes use of a different method now, `stub()`, whereas Jasmine chain
 
 ### What's your point?
 
-You say tomato, I say tomato. :tomato:
+You say tomato, I say tomato. 🍅
 
-One man's stub :mag: is another man's mock :mag_right:, which is another person's spy :mag:, which is another person's test double :mag_right:. When you assume that you know that you know what that testing framework is talking about, you make an __ASS__ out of __U__ and __ME__.
+One man's stub 🔎 is another man's mock 🔍, which is another person's spy 🔎, which is another person's test double 🔍. When you assume that you know that you know what that testing framework is talking about, you make an __ASS__ out of __U__ and __ME__.
 
 _This post was inspired by the day I lost wondering why my Jasmine spy wasn't behaving how I thought it should. Curse you `.and.callThrough()`!!_
 

@@ -74,7 +74,7 @@ describe("My amazing regex", function() {
     it("should pass", function() {
         expect(42).to.equal(42);
     });
-    
+
     it("should fail", function() {
         expect(42).not.to.equal("42");
     });
@@ -85,7 +85,7 @@ Now run from the command line:
 
 ### `$ npm test`
 
-And tada :tada: you should see some working specs:
+And tada 🎉 you should see some working specs:
 
 ![My First Specs](/assets/passingspecs.png)
 

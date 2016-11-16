@@ -82,7 +82,7 @@ So you already know that `File.expand_path` returns the absolute path of the 1st
 
 So `File.expand_path('../lib', __FILE__)` gets the path to the lib directory _relative_ to the currently executing file, meaning you don't have to worry about where you actually are when finding paths.
 
-### How do I know that you're not talking baloney? :poop:
+### How do I know that you're not talking baloney? 💩
 
 Whip up a quick rb file and put the following:
 

@@ -9,7 +9,7 @@ categories:
 - css
 ---
 
-Let's a take a bog-standard list: :toilet::clipboard:
+Let's a take a bog-standard list: 🚽📋
 
 ```html
 <ul>
@@ -20,7 +20,7 @@ Let's a take a bog-standard list: :toilet::clipboard:
 </ul>
 ```
 
-Quick, off the top of your head: :older_man:
+Quick, off the top of your head: 👴
 
 * How would you select only the last list item? `li:last-child`
 * What if we added another item to the list. How would you select only the last _2_ elements? `li:nth-last-child(-n+2)`
@@ -28,17 +28,17 @@ Quick, off the top of your head: :older_man:
 
 But actually, we could have used that last selector all along and it would have been more resistant to the changing structure of the list, considering our requirements: which were that we always wanted to miss the first 3 elements and select anything after them, regardless of how many other li's there were in the list.
 
-On the other hand :wave:, what about if the list was changing length but you always wanted _just_ the last 3 elements? You could have stuck with `nth-last-child(-n+3)`. See, depends on your requirements and how you phrase the question.
+On the other hand 👋, what about if the list was changing length but you always wanted _just_ the last 3 elements? You could have stuck with `nth-last-child(-n+3)`. See, depends on your requirements and how you phrase the question.
 
 ### Aside
 
-People get snobby about using w3schools resources but I love the "Try it yourself" examples for playing around with selectors like this: they're easy to google for an example you want and simple to modify. Spend less time being critical and elitist and putting beginners off just so you sound like you know what you're talking about and more time writing code! :nose: _Fin._
+People get snobby about using w3schools resources but I love the "Try it yourself" examples for playing around with selectors like this: they're easy to google for an example you want and simple to modify. Spend less time being critical and elitist and putting beginners off just so you sound like you know what you're talking about and more time writing code! 👃 _Fin._
 
-### :underage: P.S.
+### 🔞 P.S.
 
 `nth-child`, `nth-last-child` and other helpful advanced selectors [are not supported in IE8](http://caniuse.com/#search=nth-last-child).
 
-### Read more :notebook_with_decorative_cover:
+### Read more 📓
 
 * [http://stackoverflow.com/questions/4844456/is-it-possible-to-select-the-last-n-items-with-nth-child](http://stackoverflow.com/questions/4844456/is-it-possible-to-select-the-last-n-items-with-nth-child)
 * [https://css-tricks.com/useful-nth-child-recipies/](https://css-tricks.com/useful-nth-child-recipies/)

@@ -41,7 +41,7 @@ You should increment the version number to indicate what changes you've made in 
 
 Reset the other increments as appropriate: a package on version 1.4.3 releasing a major version would be released as 2.0.0. See the [semver site](http://semver.org/) for more examples of how to correctly version your software.
 
-## Carets & Tildes & Ranges, Oh my! :cat: :tiger: :bear:
+## Carets & Tildes & Ranges, Oh my! 🐈 🐅 🐻
 
 You've installed a dependency to your app using npm, but you're not too precious about the version of the dependency - it's not critical and it'll probably still work if the version is 0.4.1 or 0.4.2. You can specify how flexible you want to be with versions using special symbols in the `package.json` file. but you want to specify what version is used. Here's a brief primer:
 
@@ -56,11 +56,11 @@ __Allow only patch changes:__ `~1.1.3` which is like >=1.1.3 <1.2.0
 
 __Allow minor changes:__ `^1.1.3` which is like >=1.1.3 <2.0.0
 
-## :bear: Bear in mind ...
+## 🐻 Bear in mind ...
 
 Semver is only a convention that developers should follow, and isn't strictly enforceable. While some delightful soul may just bump the minor version whilst adding breaking changes to a pivotal package used by your app, package versioning like this works on the assumption that humans can follow a simple set of rules.
 
-Do your bit: spread the word about semver to your colleagues so that we're all on the same page! :book:
+Do your bit: spread the word about semver to your colleagues so that we're all on the same page! 📖
 
 If you really want to lock down the dependency versions in your package.json, consider looking at `npm shrinkwrap`.
 

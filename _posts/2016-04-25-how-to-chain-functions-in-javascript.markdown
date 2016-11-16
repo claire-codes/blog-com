@@ -9,9 +9,9 @@ categories:
 - javascript
 ---
 
-The chaining design pattern is lovely. :sunrise: It means we can call several object methods in one line of code. You see this pattern used in jQuery a lot.
+The chaining design pattern is lovely. 🌅 It means we can call several object methods in one line of code. You see this pattern used in jQuery a lot.
 
-Instead of several repetitive lines (A) we have a cleaner one-liner (B) :cake::
+Instead of several repetitive lines (A) we have a cleaner one-liner (B) 🍰:
 
 ```javascript
 // (A)
@@ -110,4 +110,4 @@ let chainFoo = new ChainPrototype.setPhrase('foo').makeItRed().shoutIt().phrase;
 // 'RED FOO'
 ```
 
-In summary: make an object, make the methods, make them all return `this`. Boom. :facepunch::boom:
+In summary: make an object, make the methods, make them all return `this`. Boom. 👊💥

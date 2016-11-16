@@ -26,7 +26,7 @@ git plog
 
 And this gives you the same output as the full version.
 
-:open_mouth:
+😮
 
 Git aliases are like shortcuts to common tasks. You can even alias already short commands, e.g.:
 
@@ -67,7 +67,7 @@ I run `chmod 777` against the script to make sure it's executable, then all I ne
 allExcept dont-add-me.txt
 ```
 
-The `$1` is the first argument to the script. The commands are executed and the status of the repo is printed out to the console. Boom! :punch::boom: What else could you create a shortcut for? It doesn't have to be Git-related, it could be any sequence of shell commands. :shell:
+The `$1` is the first argument to the script. The commands are executed and the status of the repo is printed out to the console. Boom! 👊💥 What else could you create a shortcut for? It doesn't have to be Git-related, it could be any sequence of shell commands. 🐚
 
 For lots more Git tips and tricks, check out the Pro Git book, including the article on aliases:
 

@@ -14,11 +14,11 @@ Here is my top tip to help you write better tests, be they unit tests, integrati
 
 Always write a failing test first.
 
-There are three steps to TDD. You may have heard of the :vertical_traffic_light: traffic lights*:
+There are three steps to TDD. You may have heard of the 🚦 traffic lights*:
 
-* :heart: __Red__: write a failing test
-* :yellow_heart: __Amber__: make the test pass
-* :green_heart: __Green__: improve the code you've just written, refactor
+* ❤️ __Red__: write a failing test
+* 💛 __Amber__: make the test pass
+* 💚 __Green__: improve the code you've just written, refactor
 
 Or maybe red test -> green test -> refactor**. I believe that this first step, to have red test, is important it you're following Test-Driven-Development and writing tests first, or whether you're writing tests after you've already implemented your feature.
 
