@@ -10,7 +10,7 @@ layout: default
     <meta itemprop="mainEntityOfPage" content="{{ page.url | prepend: site.url }}" />
     <meta itemprop="author publisher" itemtype="http://schema.org/Person" content="{{ site.author }}" />
     <div class="post-header mb2">
-      <h1 itemprop="name headline">{{ page.title }}</h1>
+      <h1 class="c-posts__header" itemprop="name headline">{{ page.title }}</h1>
       <span class="post-meta" itemprop="datePublished dateModified">{{ page.date | date: site.date_format }}</span><br>
       <span class="post-meta">
       {% if page.categories %}Posted in{% for c in page.categories %} <strong>/<span itemprop="keywords">{{c}}</span></strong>{% endfor %}{% endif %}</span><br />
