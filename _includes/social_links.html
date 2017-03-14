@@ -1,10 +1,23 @@
-<div class="social-icons">
-    <div class="social-icons-left">
-        <a class="fa fa-github" href="https://github.com/{{ site.github_username }}"></a>
-        <a class="fa fa-rss" href="{{ " /feed.xml " | prepend: site.baseurl }}"></a>
-        <a class="fa fa-instagram" href=https://instagram.com/flynner__></a>
-        <a class="fa fa-twitter" href="https://twitter.com/{{ site.twitter_username }}"></a>
-        <a class="fa fa-linkedin-square" href="http://uk.linkedin.com/in/claireparker2"></a>
-    </div>
+<div class="c-social-icons">
+    <a class="c-social-icons__link" href="https://github.com/{{ site.github_username }}">
+        <span class="c-social-icons__font-icon fa fa-github" aria-hidden="true"></span>
+        <span class="c-social-icons__screenreader_label">Go to my Github profile</span>
+    </a>
+    <a class="c-social-icons__link" href="{{ " /feed.xml " | prepend: site.baseurl }}">
+        <span class="c-social-icons__font-icon fa fa-rss" aria-hidden="true"></span>
+        <span class="c-social-icons__screenreader_label">Subscribe to my RSS feed</span>
+    </a>
+    <a class="c-social-icons__link" href=https://instagram.com/flynner__>
+        <span class="c-social-icons__font-icon fa fa-instagram" aria-hidden="true"></span>
+        <span class="c-social-icons__screenreader_label">Go to my Instagram profile</span>
+    </a>
+    <a class="c-social-icons__link" href="https://twitter.com/{{ site.twitter_username }}">
+        <span class="c-social-icons__font-icon fa fa-twitter" aria-hidden="true"></span>
+        <span class="c-social-icons__screenreader_label">Go to my Twitter feed</span>
+    </a>
+    <a class="c-social-icons__link" href="http://uk.linkedin.com/in/claireparker2">
+        <span class="c-social-icons__font-icon fa fa-linkedin-square" aria-hidden="true"></span>
+        <span class="c-social-icons__screenreader_label">Go to my LinkedIn profile</span>
+    </a>
 </div>
 <div class="clearfix"></div>

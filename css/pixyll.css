@@ -1006,25 +1006,29 @@ footer {
   footer .social-icons-left {
     text-align: center; }
 
-.social-icons-left, .social-icons-right {
-  text-align: center;
-  float: none; }
-
-.social-icons {
+.c-social-icons__font-icon {
   font-size: 1.25rem;
-  padding: 0.5em 0 0 0;
-  width: 100%; }
-
-.social-icons a.fa {
+  padding: 0.5em 0 0;
   cursor: pointer;
   opacity: 0.8;
   padding: 0.2em;
   color: #0076df; }
-  .social-icons a.fa:hover {
-    color: #00369f; }
+  .c-social-icons__font-icon:hover {
+    color: #00369f;
+    opacity: 1; }
 
-.social-icons a.fa:hover {
-  opacity: 1; }
+.c-social-icons__screenreader_label {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.c-social-icons__link {
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 0.2em;
+  color: #0076df; }
 
 blockquote {
   border-left: 5px solid #7a7a7a;
