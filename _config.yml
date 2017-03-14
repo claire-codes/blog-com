@@ -21,19 +21,7 @@ exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile']
 
 gems:
   - jekyll-sitemap
- 
-# Post sharing icons
-show_sharing_icons: false
-# Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
-share_googleplus: false
-share_linkedin: false
-share_digg: false
-share_tumblr: false
-share_reddit: false
-share_stumbleupon: false
-share_hackernews: false
+
 # Disqus post comments
 # (leave blank to disable Disqus)
 disqus_shortname: 'claireparkerpen'
@@ -70,7 +58,7 @@ text:
       error:    'Error!'
   thanks: 'Thanks for contacting us. We will reply as soon as possible.'
   og_locale: 'en_US'
- 
+
   compress_html:
       clippings: all
       comments:  ["<!-- ", " -->"]
