@@ -8,8 +8,9 @@ layout: default
     <p style="font-weight: 700; float: right">Showing <span id="displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</p>
     <p>Filter by category:</p>
     <div class="filter-row">
-      {% for c in site.categories %}
-      <input type="checkbox" data-category="{{c | first}}" id="{{c | first}}-check" onchange="displayFiltered()"/><label itemprop="keywords" for="{{c | first}}-check">{{c | first}}</label>
+      {% for category in site.categories %}
+      <input type="checkbox" data-category="{{category | first}}" id="{{category | first}}-check" onchange="displayFiltered()"/>
+      <label class="c-filter__label" itemprop="keywords" for="{{category | first}}-check">{{category | first}}</label>
       {% endfor %}
     </div>
   </div>
