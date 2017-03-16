@@ -1181,13 +1181,14 @@ input[type="checkbox"] {
 .filter-row {
   line-height: 30px; }
 
-label {
+.c-filter__label {
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid #333;
-  padding: 4px;
-  margin: 1px; }
-  label:hover {
+  padding: 4px 10px;
+  margin: 5px;
+  line-height: 40px; }
+  .c-filter__label:hover {
     background-color: #777;
     color: #fff; }
 
