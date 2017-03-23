@@ -24,10 +24,10 @@ This isn’t an attribute I've come across much in the wild, which intrigued me:
 <div class="c-tldr">
     <h2 class="c-tldr__title">TL;DR</h2>
     <ul>
-    <li>It creates a tooltip of the content when the element is hovered over</li>
-    <li>Don’t use tooltips!</li>
+    <li>The title attribute creates a tooltip of its value when the element it belongs to is hovered over</li>
+    <li>👉 Don’t use tooltips!</li>
     <li><pre>
-    if (informationIsImportant === true) {
+if (informationIsImportant === true) {
    print directly to screen;
 else (informationIsNotThatImportant === true) {
    don’t include it in your page;
@@ -36,9 +36,11 @@ else (informationIsNotThatImportant === true) {
 
 ## What does the title attribute do?
 
-The string provided to the title attribute is presented as a tooltip whenever the element is hovered over. So in theory it contains supplementary information about the element it’s attached to. Try hovering over this example (if you’re on a device that allows you to hover of course!):
+The string provided to the title attribute is presented as a tooltip whenever the element is hovered over by the cursor. So in theory it contains supplementary information about the element it’s attached to. Try hovering over this example (if you’re on a device that allows you to hover of course!):
 
-<div title="You'll only see me if you hover">Hover me</div>
+<div title="You'll only see me if you hover" style="margin: 15px; border: 5px dashed dark-gray; padding: 15px;">
+    <strong>Hover your cursor over me</strong>
+</div>
 
 If it isn’t given an attribute itself but a parent element is, then it inherits and will show that instead.
 
@@ -52,17 +54,23 @@ To create a simple tooltip.
 
 ## Do I want to create a tooltip?
 
-No. For starters, the HTML spec discourages the use of the title attribute for this purpose. You should not be storing potentially important, useful information in a tooltip, as certain user groups can’t access it. Storing information only accessible when hovered over means that groups of users can’t see it:
+No. For starters, the HTML spec discourages the use of the title attribute for this purpose. You should not be storing potentially important, useful information in a tooltip, as certain user groups can’t access it:
 
 - smartphone and tablet users are unable to hover
 - the title attribute is ignored by screen readers and not read out
 
+## But what about images?
+
+You're getting confused with the `alt` attribute that's used for images. It's valid HTML5 syntax to include a `title` attribute on an image, but again it won't be read out by screen reader software. If the image doesn't render on your page, then it's the text contained in the `alt` attribute that appears on the screen, not the `title`.
+
 ## What alternatives are there?
 
-To write clear, concise labels and instructions throughout your site, and negate the need for tooltips.
+When building a web page, you should include clear, concise instructions and labels. A well-crafted web app won't need tooltips to assist the user. Ask yourself:
 
-Is the information useful and does a user need to see it? Then in should be clearly on the screen and not hidden.
+* **Is the information useful and does a user need to see it?** If yes, then it should be clearly visible on the screen and not hidden.
 
-Is the information non-essential? Then you should question the validity of it on the page.
+* **Is the information non-essential?** If not, then you should question whether it's necessary to include it on the page.
 
-There’s a tonne more detailed information on this on the web of course. Next time I work on a Magento 2 template and see the title attribute I’ll be deleting it to keep my files free of cruft.
+For more information on this topic, I highly recommend any articles by the [Paciello Group](https://www.paciellogroup.com).
+
+Next time I work on a Magento 2 template and see the title attribute I’ll take pleasure in hitting the delete button and keeping my markup free of unnecessary attributes. 🔥
