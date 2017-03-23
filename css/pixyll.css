@@ -688,7 +688,9 @@ code {
 
 code {
   color: #17156c;
-  background-color: #ddd; }
+  background-color: #ddd;
+  padding-left: 5px;
+  padding-right: 5px; }
 
 pre {
   padding: 1.125em;
@@ -1216,3 +1218,11 @@ input[type="checkbox"] {
   height: 1px;
   width: 1px;
   overflow: hidden; }
+
+.c-tldr {
+  border: 5px dashed #333;
+  padding: 20px 10px 10px 20px;
+  margin-bottom: 1rem; }
+
+.c-tldr__title {
+  margin-top: 0; }

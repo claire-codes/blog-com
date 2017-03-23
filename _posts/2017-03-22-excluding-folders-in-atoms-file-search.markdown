@@ -11,8 +11,8 @@ categories:
 
 Are you working on a large project in Atom? Dozens of directories? Thousands of files? Innumerable node modules? You may have discovered that Atom isn't the fatest editor out there when executing search queries across an entire project. Give Atom a helping hand by narrowing down the scope of its search with a few simple tricks.
 
-<div class="tldr">
-    <h2>TL;DR</h2>
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
     <ul>
         <li>Exclude a directory from your search by putting an exclamation point in front of its name: <code>!node_modules/</code></li>
         <li>Include or exclude several directories by separating their file paths with commas: <code>web/, !static/</code></li>
