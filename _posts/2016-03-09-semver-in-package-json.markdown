@@ -8,8 +8,8 @@ published: true
 categories:
 - javascript
 ---
-<div class="tldr">
-    <h2>TL;DR</h2>
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
     <ul>
         <li><strong>Allow only patch changes</strong>: <code>~1.1.3</code>, e.g. >=1.1.3 <1.2.0</li>
         <li><strong>Allow minor changes</strong>: <code>^1.1.3</code>, e.g. >=1.1.3 <2.0.0</li>

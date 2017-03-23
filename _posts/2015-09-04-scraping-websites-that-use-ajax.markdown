@@ -9,8 +9,8 @@ categories:
 
 ## Or, where's the rest of my HTML??
 
-<div class="tldr">
-    <h2>TL;DR</h2>
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
     <ul>
         <li>If the website you're scraping uses Ajax to load content, open-uri and Nokogiri won't cut it</li>
         <li>Use Watir WebDriver (+ PhantomJS) instead</li>

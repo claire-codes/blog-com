@@ -7,8 +7,8 @@ categories:
 - longread
 ---
 
-<div class="tldr">
-    <h2>TL;DR</h2>
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
     <ul>
         <li>Next time you pair program, try using the Pomodoro Technique to improve your productivity and mix things up a bit.</li>
         <li>Breaks up difficult or tedious stories</li>

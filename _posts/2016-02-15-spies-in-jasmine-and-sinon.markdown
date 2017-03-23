@@ -8,8 +8,8 @@ categories:
 - javascript
 ---
 
-<div class="tldr">
-    <h2>🔎 TL;DR 🔍</h2>
+<div class="c-tldr">
+    <h2 class="c-tldr__title">🔎 TL;DR 🔍</h2>
     <ul>
         <li>Terminology used by Jasmine, Sinon and other testing frameworks is not the same: one person's spy is another person's stub</li>
         <li>The equivalent of Sinon's <code>sinon.spy(foo,'bar')</code> in Jasmine is <code>spyOn(foo,'bar').and.callThrough()</code></li>

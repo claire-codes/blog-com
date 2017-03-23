@@ -21,8 +21,8 @@ This is the pattern I've seen used: the title attribute is used to repeat the te
 
 This isn’t an attribute I've come across much in the wild, which intrigued me: are the Magento team writing accessible, semantically correct HTML that I should copy? (Spoiler alert: no) So I investigated further.
 
-<div class="tldr">
-    <h2>TL;DR</h2>
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
     <ul>
     <li>It creates a tooltip of the content when the element is hovered over</li>
     <li>Don’t use tooltips!</li>

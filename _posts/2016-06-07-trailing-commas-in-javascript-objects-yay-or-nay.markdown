@@ -9,14 +9,17 @@ categories:
 - javascript
 ---
 
-## TL;DR
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
+    <ul>
+<li>A trailing comma on the final property of a JavaScript object is valid syntax in ECMAScript5</li>
+<li>... but it will throw an error in IE8 <em>*surprise*</em> 🎉</li>
+<li>Trailing commas are also allowed in arrays</li>
+<li>But if you try to parse an object with a trailing comma to JSON it will throw an error</li>
+</ul>
+</div>
 
-* A trailing comma on the final property of a JavaScript object is valid syntax in ECMAScript5
-* ... but it will throw an error in IE8 \**surprise*\*
-* Trailing commas are also allowed in arrays
-* But if you try to parse an object with a trailing comma to JSON it will throw an error
-
-Do you notice anything with this object?
+Do you notice anything different about this object?
 
 ```javascript
 {

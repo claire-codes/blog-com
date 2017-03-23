@@ -8,8 +8,8 @@ published: true
 categories:
 - css
 ---
-<div class="tldr">
-    <h2>TL;DR</h2>
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
     <ul>
         <li>Clears floating elements <strong>preceding</strong> the one it's applied to</li>
         <li>Whether you need <code>clear: left</code> or <code>clear: right</code> depends on the direction the element is floating</li>
