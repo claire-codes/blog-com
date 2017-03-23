@@ -328,11 +328,6 @@ a {
 a:hover {
   text-decoration: underline; }
 
-pre,
-code {
-  background-color: #eee;
-  border-radius: 3px; }
-
 hr {
   border: 0;
   border-bottom-style: solid;
@@ -692,7 +687,8 @@ code {
   font-family: "Source Code Pro", Consolas, monospace; }
 
 code {
-  color: #7a7a7a; }
+  color: #17156c;
+  background-color: #ddd; }
 
 pre {
   padding: 1.125em;
