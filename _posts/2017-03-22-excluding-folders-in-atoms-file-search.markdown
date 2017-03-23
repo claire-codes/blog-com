@@ -14,9 +14,9 @@ Are you working on a large project in Atom? Dozens of directories? Thousands of 
 <div class="tldr">
     <h2>TL;DR</h2>
     <ul>
-        <li>Exclude a directory from your search by putting an exclamation point in front of its name: `!node_modules/`</li>
-        <li>Include or exclude several directories by separating their file paths with commas: `web/, !static/`</li>
-        <li>Search for for a particular file type in all subdirectories: `frontend/**/*.js`</li>
+        <li>Exclude a directory from your search by putting an exclamation point in front of its name: <code>!node_modules/</code></li>
+        <li>Include or exclude several directories by separating their file paths with commas: <code>web/, !static/</code></li>
+        <li>Search for for a particular file type in all subdirectories: <code>frontend/**/*.js</code></li>
    </ul>
 </div>
 
@@ -26,21 +26,21 @@ Everything in Atom is a package. The search functionality is no different and li
 
 ## 1. Exclude gitignored files
 
-Open the Core Settings menu and make sure the **Exclude VCS Ignored Paths** option is selected. Now every file and directory in your `.gitignore` file will be excluded from your search. Typically you would add the `node_modules` directory in the `.gitignore` file so this can provide a big win for JavaScript based projects.
+Open the Core Settings menu and make sure the **Exclude VCS Ignored Paths** option is selected. Now every file and directory in your `.gitignore` file will be excluded from your search. Typically you would add the `node_modules/` directory in the `.gitignore` file so this can provide a big win for JavaScript based projects.
 
-![Exclude VCS Ignored Paths setting](/assets/VCS-setting.png "Exclude VCS Ignored Paths setting")
+![Exclude VCS Ignored Paths setting](/assets/VCS-setting.png)
 
 ## 2. Search in a specific directory
 
 Do you only want to search for the string "cheezeburger" in the `kittehs/` directory? Then enter this path in the Find and Replace panel before hitting return to narrow the search scope to this folder.
 
-![Search only in this directory example](/assets/only-dir.png "Search only in this directory example")
+![Search only in this directory example](/assets/only-dir.png)
 
 ## 3. Search in multiple specific directories
 
 Do you only want to search in either the `kittehs/` folder or the `doge/` folder? Then separate their paths with commas to search just within these directories.
 
-![Search in multiple directories example](/assets/multi-dir.png "Search in multiple directories example")
+![Search in multiple directories example](/assets/multi-dir.png)
 
 ## 4. Exclude specific directories from search
 
@@ -48,19 +48,19 @@ How about when you know you definitely don't want to search within a particular 
 
 For example, look everywhere but the `node_modules/` directory by just typing `!node_modules/` and running the search.
 
-![Exclude a directory example](/assets/not-dir.png "Exclude a directory example")
+![Exclude a directory example](/assets/not-dir.png)
 
-## 5. Include and exclude specfic directories
+## 5. Include and exclude specific directories
 
 You can combine the previous two techniques by separating the patterns with a comma.
 
-![Combining including and excluding patterns example](/assets/multi-dir.png "Combining including and excluding patterns example")
+![Combining including and excluding patterns example](/assets/multi-dir.png)
 
 ## 6. Search for file types within directories
 
 You know that you can filter by file type by using the wildcard character and the file extension. To search only in JavaScript files type `*.js`. But say we want to look in JavaScript files in the `web/` directory. If we were to type `web/*.js`, this will only search for JavaScript files directly in the `web/` folder, and not in any of `web/`'s subdirectories (if it has any). To include all subdirectories in the search, use the globstar pattern instead: `web/**/*.js`
 
-![File types with glob pattern example](/assets/glob.png "File types with glob pattern example")
+![File types with glob pattern example](/assets/glob.png)
 
 These techniques make use of glob patterns, which are a useful skill to know and can be applied to many other editors and searching tools to save millions of milliseconds of your life when searching. ⏱
 
