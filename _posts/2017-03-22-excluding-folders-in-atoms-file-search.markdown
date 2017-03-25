@@ -24,7 +24,7 @@ _Note_: The trailing slashes are optional - I use them for clarity here to indic
 
 Every piece of functionality in Atom is provided by a package, and the search panel is no different. When you press <kbd>Cmd + Shift + F</kbd> on a Mac or <kbd>Ctrl + Shift + F</kbd> on Windows the search panel appears, courtesy of the [find-and-replace package](https://atom.io/packages/find-and-replace). Your search term goes in the first box, and any of the patterns in the following tips are placed in the third "File/directory pattern" box.
 
-![The find and replace package panel](assets/find-and-replace-panel.png)
+![The find and replace package panel](/assets/find-and-replace-panel.png)
 
 ## 1. Exclude gitignored files
 
@@ -59,7 +59,7 @@ For example, look everywhere but the `node_modules/` directory by just typing `!
 
 You can combine the previous two techniques by separating the patterns with a comma. This is useful if you want to search within a directory but exclude a subdirectory of it, e.g. `javascript/, !javascript/tests/`.
 
-![Combining including and excluding patterns example](/assets/multi-dir.png)
+![Combining including and excluding patterns example](/assets/all-the-dir.png)
 
 ## 6. Search for file types within directories
 
