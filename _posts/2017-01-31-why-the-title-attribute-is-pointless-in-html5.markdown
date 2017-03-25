@@ -61,7 +61,7 @@ No. For starters, the HTML spec discourages the use of the title attribute for t
 
 ## But what about images?
 
-You're getting confused with the `alt` attribute that's used for images. It's valid HTML5 syntax to include a `title` attribute on an image, but again it won't be read out by screen reader software. If the image doesn't render on your page, then it's the text contained in the `alt` attribute that appears on the screen, not the `title`.
+You're getting confused with the `alt` attribute. It's still valid HTML5 syntax to include a `title` attribute on an image, but again it won't be read out by screen reader software. If the image doesn't render on your page, then it's the text contained in the `alt` attribute that appears on the screen, not the `title` attribute text. The `alt` text is also the content read out by screen readers.
 
 ## What alternatives are there?
 
@@ -71,6 +71,6 @@ When building a web page, you should include clear, concise instructions and lab
 
 * **Is the information non-essential?** If not, then you should question whether it's necessary to include it on the page.
 
-For more information on this topic, I highly recommend any articles by the [Paciello Group](https://www.paciellogroup.com).
+For more information on this topic, I highly recommend any of the articles by the [Paciello Group](https://www.paciellogroup.com).
 
 Next time I work on a Magento 2 template and see the title attribute I’ll take pleasure in hitting the delete button and keeping my markup free of unnecessary attributes. 🔥
