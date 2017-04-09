@@ -861,6 +861,7 @@ sup {
   background-image: none; }
 
 .site-header .site-title {
+  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
   font-size: 1.5rem; }
 
 .site-nav {
@@ -996,7 +997,7 @@ footer {
   color: #737373;
   font-size: 0.75rem;
   font-weight: 300;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center; }
   footer .fa {
     font-size: 30px;
