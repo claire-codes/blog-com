@@ -18,6 +18,7 @@ layout: default
 
   <div class="posts" itemscope itemtype="http://schema.org/Blog">
     {% for post in site.posts %}
+      {% unless post.categories contains "interesting" %}
       <div class="post py3" data-categories="{%for category in post.categories %}{{category}} {% endfor %}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
           <p class="post-meta" itemprop="datePublished">
               {{ post.date | date: site.date_format }}        {%for category in post.categories %}
@@ -31,6 +32,7 @@ layout: default
             {{ post.summary }}
           </p>
         </div>
+      {% endunless %}
     {% endfor %}
   </div>
 </div>
