@@ -6,7 +6,7 @@ tags: interesting
 ---
 
 <p>
-This is an experiment to record areas of web development I'm interested in right now and things I have been intersted in. I might be covering them as part of work or something may have piqued my interest from a tweet or a Frontend Focus article.
+👩🏼‍🔬 This is an experiment to record areas of web development I'm interested in right now and things I have been intersted in. I might be covering them as part of work or something may have piqued my interest from a tweet or a Frontend Focus article.
 </p>
 
 <p>
