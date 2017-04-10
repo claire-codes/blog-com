@@ -7,6 +7,7 @@ namespace :assets do
 end
 
 source_dir = '.'
+interests_posts_dir = "interesting/_posts"
 posts_dir       = "_posts"    # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 
@@ -34,8 +35,34 @@ task :new_post, :title do |t, args|
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
     post.puts "comments: true"
     post.puts "published: true"
-    post.puts "categories: "
+    post.puts "categories:"
     post.puts "- #{category}"
+    post.puts "---"
+  end
+end
+
+# usage rake interests
+desc "Begin a new Interests post in #{source_dir}/#{interests_posts_dir}"
+task :interests do
+  interest_one = get_stdin("What's the first thing you're interested in this week? ")
+  interest_two = get_stdin("What's the second? ")
+  interest_three = get_stdin("And the third? (Add or delete as you wish in the file) ")
+  mkdir_p "#{source_dir}/#{posts_dir}"
+  filename = "#{source_dir}/#{interests_posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-interests.#{new_post_ext}"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{Time.now.strftime('%Y-%m-%d')}\""
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
+    post.puts "published: true"
+    post.puts "interests:"
+    post.puts "- #{interest_one}"
+    post.puts "- #{interest_two}"
+    post.puts "- #{interest_three}"
     post.puts "---"
   end
 end
