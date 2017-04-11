@@ -4,12 +4,16 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     sourcemaps = require('gulp-sourcemaps')
-    cssnano = require('gulp-cssnano');
+    cssnano = require('gulp-cssnano'),
+    uncss = require('gulp-uncss');
 
 gulp.task('css', function() {
     gulp.src('scss/pixyll.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(uncss({
+            html: ['_site/**/*.html']
+        }))
         .pipe(gulp.dest('css/'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cssnano())
@@ -25,4 +29,13 @@ gulp.task('images', function() {
 
 gulp.task('default', [], function() {
     gulp.start('css', 'images');
+});
+
+gulp.task('uncss', function () {
+    return gulp.src('css/pixyll.css')
+        .pipe(uncss({
+            html: ['_site/**/*.html']
+        }))
+        .pipe(rename('pixyll-uncss.css'))
+        .pipe(gulp.dest('css/'));
 });
