@@ -25,10 +25,11 @@ var displayFiltered = function() {
             allItems[l].className = "post py3 show";
         }
     } else {
+        var types;
         for (var i = 0; i < allItems.length; i++) {
             allItems[i].className = "post py3";
             /* Account for items with more than one category */
-            types = allItems[i].getAttribute('data-categories').split(" ");
+            types = allItems[i].getAttribute('data-categories').trim().split(" ");
             for (var j = 0; j < types.length; j++) {
                 if (categoriesToShow.indexOf(types[j]) != -1) {
                     allItems[i].className = "post py3 show";
