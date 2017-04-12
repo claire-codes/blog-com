@@ -504,6 +504,12 @@ input[type="checkbox"] {
     background-color: #777;
     color: #fff; }
 
+.show {
+  display: block !important; }
+
+.hide {
+  display: none !important; }
+
 .c-share-button__wrapper {
   margin-top: 15px;
   margin-bottom: 15px; }

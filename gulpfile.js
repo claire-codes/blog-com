@@ -12,7 +12,8 @@ gulp.task('css', function() {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(uncss({
-            html: ['_site/**/*.html']
+            html: ['_site/**/*.html'],
+            ignore: ['.hide', '.show']
         }))
         .pipe(gulp.dest('css/'))
         .pipe(rename({suffix: '.min'}))
