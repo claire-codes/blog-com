@@ -484,23 +484,23 @@ blockquote {
   margin: 0 auto;
   max-width: 42rem; }
 
-input[type="checkbox"] {
+.c-filter__input {
   display: none; }
-  input[type="checkbox"]:checked + label {
+  .c-filter__input:checked + .c-filter__category-label {
     background-color: #ccc;
     color: #333; }
 
 .filter-row {
   line-height: 30px; }
 
-.c-filter__label {
+.c-filter__category-label {
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid #333;
   padding: 4px 10px;
   margin: 5px;
   line-height: 40px; }
-  .c-filter__label:hover {
+  .c-filter__category-label:hover {
     background-color: #777;
     color: #fff; }
 

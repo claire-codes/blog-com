@@ -1,6 +1,6 @@
-input[type="checkbox"] {
+.c-filter__input {
     display: none;
-    &:checked + label {
+    &:checked + .c-filter__category-label {
         background-color: $light-gray;
         color: $dark-gray;
     }
@@ -8,7 +8,7 @@ input[type="checkbox"] {
 .filter-row {
     line-height: 30px;
 }
-.c-filter__label {
+.c-filter__category-label {
     cursor: pointer;
     border-radius: 3px;
     border: 1px solid $dark-gray;
