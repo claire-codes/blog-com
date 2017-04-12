@@ -9,8 +9,11 @@ layout: default
         <p>Filter by category:</p>
         <div class="filter-row">
             {% for category in site.categories %}
-            <input type="checkbox" data-category="{{category | first}}" id="{{category | first}}-check" onchange="displayFiltered()" />
-            <label class="c-filter__label" itemprop="keywords" for="{{category | first}}-check">{{category | first}}</label> {% endfor %}
+                {% unless category.first == "interesting" %}
+                <input type="checkbox" data-category="{{category | first}}" id="{{category | first}}-check" onchange="displayFiltered()" />
+                <label class="c-filter__label" itemprop="keywords" for="{{category | first}}-check">{{category | first}}</label>
+                {% endunless %}
+            {% endfor %}
         </div>
     </div>
 
