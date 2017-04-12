@@ -1,5 +1,5 @@
 var getSelectedCategories = function() {
-    var allTypes = document.getElementsByTagName('input');
+    var allTypes = document.querySelectorAll('.js-category');
     // convert from nodelist to array
     allTypes = Array.prototype.slice.call(allTypes, 0);
     // Return the data-categories of checked inputs only
