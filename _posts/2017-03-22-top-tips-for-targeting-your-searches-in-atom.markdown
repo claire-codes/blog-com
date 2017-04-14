@@ -71,4 +71,10 @@ But what if we want to search for our term in JavaScript files but only within t
 
 ![File types with glob pattern example](/assets/glob.png)
 
+## 🌟 Bonus tip
+
+With the keyboard focus in any of the search panel fields, press up ⬆️ and your last search term will appear! You can toggle up and down through your previous terms which is really handy 👐 if you're searching for the same few terms over and over.
+
+## Fin
+
 Glob patterns are a useful skill to have in your development ninja toolbelt and will serve you well not only in Atom but in many other editors and search tools, hopefully saving millions of milliseconds of your life when searching for that pesky string. ⏱
