@@ -1,0 +1,1 @@
+Widgets are sort of components. I'm not sure really.
