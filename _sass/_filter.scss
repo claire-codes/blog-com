@@ -1,13 +1,26 @@
+.c-filter__container {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.c-filter__total {
+    font-weight: 700;
+    float: right;
+}
+
 .c-filter__input {
     display: none;
+
     &:checked + .c-filter__category-label {
         background-color: $light-gray;
         color: $dark-gray;
     }
 }
-.filter-row {
+
+.c-filter__category-row {
     line-height: 30px;
 }
+
 .c-filter__category-label {
     cursor: pointer;
     border-radius: 3px;
@@ -15,60 +28,17 @@
     padding: 4px 10px;
     margin: 5px;
     line-height: 40px;
+
     &:hover {
         background-color: $mid-gray;
         color: #fff;
     }
 }
+
 .show {
     display: block !important;
 }
+
 .hide {
     display: none !important;
 }
-// .post-list {
-//     li:nth-child(odd) {
-//         background: #f5f5f5;
-//         &:hover {
-//             background: darken($background-color, 15%);
-// 	        &:before {
-// 	            background: darken($background-color, 15%);
-// 			}
-//             .post-link {
-//                 color: $brand-color;
-//             }
-//             .post-meta {
-//                 color: darken($grey-color-light, 15%);
-//             }
-//         }
-//         & > * {
-//             position: relative;
-//         }
-//         &:before {
-// 	        background: #f5f5f5;
-//             display: block;
-//             min-width: 1250px;
-// 			height: 100%;
-//             position: absolute;
-//             right: 0;
-//             left: 0;
-//             content: "";
-//         }
-//     }
-// }
-// .post-head {
-//     > a {
-//         height: 100%;
-//         width: 100%;
-//         display: block;
-//     }
-//     &:hover {
-//         background: darken($background-color, 15%);
-//         .post-link {
-//             color: $brand-color;
-//         }
-//         .post-meta {
-//             color: darken($grey-color-light, 15%);
-//         }
-//     }
-// }

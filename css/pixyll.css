@@ -484,13 +484,21 @@ blockquote {
   margin: 0 auto;
   max-width: 42rem; }
 
+.c-filter__container {
+  font-style: italic;
+  margin-bottom: 20px; }
+
+.c-filter__total {
+  font-weight: 700;
+  float: right; }
+
 .c-filter__input {
   display: none; }
   .c-filter__input:checked + .c-filter__category-label {
     background-color: #ccc;
     color: #333; }
 
-.filter-row {
+.c-filter__category-row {
   line-height: 30px; }
 
 .c-filter__category-label {
