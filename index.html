@@ -10,7 +10,7 @@ layout: default
         <div class="c-filter__category-row">
             {% for category in site.categories %}
                 {% unless category.first == "interesting" %}
-                <input type="checkbox" class="c-filter__input js-category" data-category="{{category | first}}" id="{{category | first}}-check" onchange="displayFiltered()" />
+                <input type="checkbox" class="c-filter__input js-category" data-category="{{category | first}}" id="{{category | first}}-check" onchange="iife.displayFiltered()" />
                 <label class="c-filter__category-label" itemprop="keywords" for="{{category | first}}-check">{{category | first}}</label>
                 {% endunless %}
             {% endfor %}
