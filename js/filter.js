@@ -17,27 +17,26 @@ var iife = (function() {
         document.querySelectorAll('.js-posts-displayed')[0].innerHTML = document.querySelectorAll('.post.py3.show').length;
     };
 
+    // Go through all posts and decide whether to show or hide depending on whether it's in the categoriesToShow array
     var displayFiltered = function() {
         var categoriesToShow = getSelectedCategories();
-        // Go through all li's and decide whether to show or hide depending on whether it's in the categoriesToShow array
-        var allItems = document.querySelectorAll('.js-post');
-        // If none are checked, show everything again
+        var allPosts = document.querySelectorAll('.js-post');
+        // If no categories are checked/selected, show all posts
         if (categoriesToShow.length === 0) {
-            for (var l = 0; l < allItems.length; l++) {
-                allItems[l].className = "post py3 show js-post";
+            for (var l = 0; l < allPosts.length; l++) {
+                allPosts[l].className = "post py3 show js-post";
             }
         } else {
-            var types;
-            for (var i = 0; i < allItems.length; i++) {
-                allItems[i].className = ".js-post";
+            var postCategories;
+            for (var i = 0; i < allPosts.length; i++) {
                 // Account for items with more than one category
-                types = allItems[i].getAttribute('data-categories').trim().split(" ");
-                for (var j = 0; j < types.length; j++) {
-                    if (categoriesToShow.indexOf(types[j]) != -1) {
-                        allItems[i].className = "post py3 show js-post";
+                postCategories = allPosts[i].getAttribute('data-categories').trim().split(" ");
+                for (var j = 0; j < postCategories.length; j++) {
+                    if (categoriesToShow.indexOf(postCategories[j]) != -1) {
+                        allPosts[i].className = "post py3 show js-post";
                         break;
                     } else {
-                        allItems[i].className = "post py3 hide js-post";
+                        allPosts[i].className = "post py3 hide js-post";
                     }
                 }
             }
