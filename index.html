@@ -5,7 +5,7 @@ layout: default
 <div class="home">
 
     <div class="c-filter__container">
-        <p class="c-filter__total">Showing <span id="displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</p>
+        <p class="c-filter__total">Showing <span class="js-posts-displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</p>
         <p>Filter by category:</p>
         <div class="c-filter__category-row">
             {% for category in site.categories %}

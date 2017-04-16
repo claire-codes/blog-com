@@ -11,15 +11,14 @@ var getSelectedCategories = function() {
 };
 
 var countDisplayed = function() {
-    document.getElementById('displayed').innerHTML = document.querySelectorAll('.post.py3.show').length;
+    document.querySelectorAll('.js-posts-displayed')[0].innerHTML = document.querySelectorAll('.post.py3.show').length;
 };
 
 var displayFiltered = function() {
     var categoriesToShow = getSelectedCategories();
-    console.log(categoriesToShow);
-    /* Go through all li's and decide whether to show or hide depending on whether it's in the categoriesToShow array */
+    // Go through all li's and decide whether to show or hide depending on whether it's in the categoriesToShow array
     var allItems = document.querySelectorAll('.js-post');
-    /* if none are checked, show everything again */
+    // If none are checked, show everything again
     if (categoriesToShow.length === 0) {
         for (var l = 0; l < allItems.length; l++) {
             allItems[l].className = "post py3 show js-post";
@@ -28,7 +27,7 @@ var displayFiltered = function() {
         var types;
         for (var i = 0; i < allItems.length; i++) {
             allItems[i].className = ".js-post";
-            /* Account for items with more than one category */
+            // Account for items with more than one category
             types = allItems[i].getAttribute('data-categories').trim().split(" ");
             for (var j = 0; j < types.length; j++) {
                 if (categoriesToShow.indexOf(types[j]) != -1) {
