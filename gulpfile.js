@@ -13,7 +13,7 @@ gulp.task('css', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(uncss({
             html: ['_site/**/*.html'],
-            ignore: ['.hide', '.show']
+            ignore: ['.animate-post', '.show-post']
         }))
         .pipe(gulp.dest('css/'))
         .pipe(rename({suffix: '.min'}))
