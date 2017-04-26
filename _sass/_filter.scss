@@ -35,10 +35,23 @@
     }
 }
 
-.show {
-    display: block !important;
+$expand-trans: max-height 2s ease;
+$collapse-trans: max-height 2s cubic-bezier(0,1,0,1);
+
+.animate-post {
+    overflow: hidden;
+    max-height: 0;
+
+    -webkit-transition: $collapse-trans;
+    -moz-transition: $collapse-trans;
+    -o-transition: $collapse-trans;
+    transition: $collapse-trans;
 }
 
-.hide {
-    display: none !important;
+.show-post {
+    max-height: 500px;
+    -webkit-transition: $expand-trans;
+    -moz-transition: $expand-trans;
+    -o-transition: $expand-trans;
+    transition: $expand-trans;
 }

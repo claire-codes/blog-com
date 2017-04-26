@@ -20,19 +20,21 @@ layout: default
     <div class="posts" itemscope itemtype="http://schema.org/Blog">
         {% for post in site.posts %}
             {% unless post.categories contains "interesting" %}
-            <div class="post py3 js-post" data-categories="{% for category in post.categories %}{{category}} {% endfor %}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-                <p class="post-meta" itemprop="datePublished">
-                    {{ post.date | date: site.date_format }}
-                    {% for category in post.categories %}
-                        <span style="color: #454545;">/{{category}}&nbsp;</span>
-                    {% endfor %}
-                </p>
-                <a href="{{ post.url | prepend: site.baseurl }}" class="post-link" itemprop="url">
-                    <h2 class="h1 post-title" itemprop="name">{{ post.title }}</h2>
-                </a>
-                <p class="post-summary" itemprop="description">
-                    {{ post.summary }}
-                </p>
+            <div class="animation-wrapper js-post" data-categories="{% for category in post.categories %}{{category}} {% endfor %}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="post py3">
+                    <p class="post-meta" itemprop="datePublished">
+                        {{ post.date | date: site.date_format }}
+                        {% for category in post.categories %}
+                            <span style="color: #454545;">/{{category}}&nbsp;</span>
+                        {% endfor %}
+                    </p>
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="post-link" itemprop="url">
+                        <h2 class="h1 post-title" itemprop="name">{{ post.title }}</h2>
+                    </a>
+                    <p class="post-summary" itemprop="description">
+                        {{ post.summary }}
+                    </p>
+                </div>
             </div>
             {% endunless %}
         {% endfor %}

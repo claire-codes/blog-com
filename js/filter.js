@@ -24,7 +24,7 @@ var iife = (function() {
         // If no categories are checked/selected, show all posts
         if (categoriesToShow.length === 0) {
             for (var l = 0; l < allPosts.length; l++) {
-                allPosts[l].className = "post py3 show js-post";
+                allPosts[l].className = "animate-post show-post js-post";
             }
         } else {
             var postCategories;
@@ -33,10 +33,10 @@ var iife = (function() {
                 postCategories = allPosts[i].getAttribute('data-categories').trim().split(" ");
                 for (var j = 0; j < postCategories.length; j++) {
                     if (categoriesToShow.indexOf(postCategories[j]) != -1) {
-                        allPosts[i].className = "post py3 show js-post";
+                        allPosts[i].className = "animate-post show-post js-post";
                         break;
                     } else {
-                        allPosts[i].className = "post py3 hide js-post";
+                        allPosts[i].className = "animate-post js-post";
                     }
                 }
             }
