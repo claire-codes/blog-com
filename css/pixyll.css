@@ -154,9 +154,6 @@ a:hover {
 
 /* Basscss Utility White Space */
 
-.mt2 {
-  margin-top: 1rem; }
-
 .mb2 {
   margin-bottom: 1rem; }
 
@@ -168,8 +165,8 @@ a:hover {
   padding-right: 1rem; }
 
 .py3 {
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-top: 0.5rem;
+  padding-bottom: 1rem; }
 
 /*
 
@@ -289,7 +286,7 @@ sup {
   top: -0.9ex; }
 
 .site-header {
-  padding-top: 0.5rem;
+  padding-top: 2rem;
   padding-bottom: 1rem; }
 
 .site-header a {
@@ -318,8 +315,7 @@ sup {
 .site-nav a + a {
   margin-left: 1em; }
 
-.site-header a:hover,
-.posts .post a:hover .post-title {
+.site-header a:hover {
   opacity: 0.78; }
 
 .site-header {
@@ -426,18 +422,12 @@ blockquote {
   margin-left: 0.5rem;
   padding: 0.5rem; }
 
-.posts {
+.c-posts {
   margin: 0;
   border-top: thin solid #f3f3f3; }
-
-.posts .post {
-  margin-bottom: 0.75em;
-  border-bottom: thin solid #f3f3f3; }
-
-.posts .post:last-child {
-  border-bottom: none;
-  margin-bottom: .375em;
-  padding-bottom: 0; }
+  .c-posts .c-posts__post {
+    margin-bottom: 0.75em;
+    border-bottom: thin solid #f3f3f3; }
 
 .post-link .post-title {
   margin-top: 0;
@@ -448,7 +438,7 @@ blockquote {
   width: auto;
   font-weight: 300;
   margin: 0;
-  padding: .25em 0;
+  padding: 0.25em 0;
   color: #767676;
   font-style: italic; }
 
