@@ -14,7 +14,7 @@ var iife = (function() {
     };
 
     var countDisplayed = function() {
-        document.querySelectorAll('.js-posts-displayed')[0].innerHTML = document.querySelectorAll('.post.py3.show').length;
+        document.querySelectorAll('.js-posts-displayed')[0].innerHTML = document.querySelectorAll('.show-post.js-post').length;
     };
 
     // Go through all posts and decide whether to show or hide depending on whether it's in the categoriesToShow array
