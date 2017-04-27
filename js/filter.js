@@ -24,19 +24,19 @@ var iife = (function() {
         // If no categories are checked/selected, show all posts
         if (categoriesToShow.length === 0) {
             for (var l = 0; l < allPosts.length; l++) {
-                allPosts[l].className = "animate-post show-post js-post";
+                allPosts[l].classList.add('show-post');
             }
         } else {
             var postCategories;
             for (var i = 0; i < allPosts.length; i++) {
                 // Account for items with more than one category
-                postCategories = allPosts[i].getAttribute('data-categories').trim().split(" ");
+                postCategories = allPosts[i].getAttribute('data-categories').trim().split(' ');
                 for (var j = 0; j < postCategories.length; j++) {
                     if (categoriesToShow.indexOf(postCategories[j]) != -1) {
-                        allPosts[i].className = "animate-post show-post js-post";
+                        allPosts[i].classList.add('show-post');
                         break;
                     } else {
-                        allPosts[i].className = "animate-post js-post";
+                        allPosts[i].classList.remove('show-post');
                     }
                 }
             }
