@@ -21,17 +21,17 @@ layout: default
         {% for post in site.posts %}
             {% unless post.categories contains "interesting" %}
             <div class="animate-post js-post" data-categories="{% for category in post.categories %}{{category}} {% endfor %}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-                <div class="c-posts__post py3">
-                    <p class="post-meta" itemprop="datePublished">
+                <div class="c-post py3">
+                    <p class="c-post__meta" itemprop="datePublished">
                         {{ post.date | date: site.date_format }}
                         {% for category in post.categories %}
-                            <span style="color: #454545;">/{{category}}&nbsp;</span>
+                            <span class="c-post__category">/{{category}}&nbsp;</span>
                         {% endfor %}
                     </p>
-                    <a href="{{ post.url | prepend: site.baseurl }}" class="post-link" itemprop="url">
-                        <h2 class="h1 post-title" itemprop="name">{{ post.title }}</h2>
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="c-post__link" itemprop="url">
+                        <h2 class="h1 c-post__title" itemprop="name">{{ post.title }}</h2>
                     </a>
-                    <p class="post-summary" itemprop="description">
+                    <p class="c-post__summary" itemprop="description">
                         {{ post.summary }}
                     </p>
                 </div>

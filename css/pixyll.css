@@ -315,7 +315,8 @@ sup {
 .site-nav a + a {
   margin-left: 1em; }
 
-.site-header a:hover {
+.site-header a:hover,
+.c-posts .c-post a:hover .c-post__title {
   opacity: 0.78; }
 
 .site-header {
@@ -425,16 +426,20 @@ blockquote {
 .c-posts {
   margin: 0;
   border-top: thin solid #f3f3f3; }
-  .c-posts .c-posts__post {
-    margin-bottom: 0.75em;
-    border-bottom: thin solid #f3f3f3; }
 
-.post-link .post-title {
+.c-posts__header {
+  margin-top: 0; }
+
+.c-post {
+  margin-bottom: 0.75em;
+  border-bottom: thin solid #f3f3f3; }
+
+.c-post__link .c-post__title {
   margin-top: 0;
   font-weight: 600;
   color: #333; }
 
-.post-meta {
+.c-post__meta {
   width: auto;
   font-weight: 300;
   margin: 0;
@@ -442,8 +447,8 @@ blockquote {
   color: #767676;
   font-style: italic; }
 
-.c-posts__header {
-  margin-top: 0; }
+.c-post__category {
+  color: #454545; }
 
 @media screen and (min-width: 32em) {
   html {
