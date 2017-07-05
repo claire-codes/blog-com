@@ -6,11 +6,11 @@ tags: interesting
 ---
 
 <p>
-👩🏼‍🔬 This is an experiment to record areas of web development I'm interested in right now and things I have been intersted in. I might be covering them as part of work or something may have piqued my interest from a tweet or a Frontend Focus article.
+👩🏼‍🔬 This page is an experiment where I can record areas of web development I'm interested in right now and keep track of past topics too. Subjects might be inspired a Tweet, a Frontend Focus link or something I've come across while coding.
 </p>
 
 <p>
-Just because I've listed something doesn't mean I've covered it in any great detail or even at all - it's an attempt at keeping focussed on a couple of topics at a time without being overwhelmed by the vast amount of really interesting Things I want to learn about and then learning about none of them.
+I imagine using this as a terse diary of what I was working on and as inspiration for future reading or projects.
 </p>
 
 <ul class="posts">
@@ -19,7 +19,7 @@ Just because I've listed something doesn't mean I've covered it in any great det
         <li><span>{{ post.date | date: site.date_format }}</span>
             <ul>
                 {% for interest in post.interests %}
-                    <li>&raquo; {{ interest }}</li>
+                    <li>{{ interest | markdownify }}</li>
                 {% endfor %}
             </ul>
         </li>
