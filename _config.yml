@@ -16,6 +16,12 @@ permalink: /blog/:title
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
+
+kramdown:
+    input: GFM
+    syntax_highlighter_opts:
+        disable : true
+
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile']
 
 gems:
