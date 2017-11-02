@@ -1,10 +1,10 @@
 # Site settings
-title: Claire Parker Pen
+title: Claire Parker
 email: claire.parker87@gmail.com
 description: Adventures in JavaScript web development
 author: Claire Parker
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.claireparker-pen.com" # the base hostname & protocol for your site
+url: "http://www.claireparker.co.uk" # the base hostname & protocol for your site
 date_format: "%b %-d, %Y"
 twitter_username: claireparkerpen
 github_username:  claireparker
