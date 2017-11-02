@@ -209,12 +209,6 @@ button {
   text-shadow: none;
   background-image: none; }
 
-.left {
-  float: left; }
-
-.right {
-  float: right; }
-
 .clearfix:before, .clearfix:after {
   content: ' ';
   display: table; }
@@ -483,6 +477,17 @@ blockquote {
 .it-me {
   text-align: center;
   font-style: italic; }
+
+.profile-image-container {
+  float: right;
+  margin-bottom: 20px;
+  height: 100px;
+  width: 100px; }
+
+@media screen and (min-width: 32em) {
+  .profile-image-container {
+    height: 200px;
+    width: 200px; } }
 
 .measure {
   margin: 0 auto;
