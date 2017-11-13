@@ -487,7 +487,8 @@ blockquote {
 @media screen and (min-width: 32em) {
   .profile-image-container {
     height: 200px;
-    width: 200px; } }
+    width: 200px;
+    margin-left: 10px; } }
 
 .measure {
   margin: 0 auto;
