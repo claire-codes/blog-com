@@ -2,10 +2,17 @@
 layout: default
 ---
 
-<div class="home">
+<!-- Some nasty filtering to count only blog posts -->
+{% assign totalCount = 0 %}
+{% for post in site.posts %}
+    {% unless post.categories contains "interesting" %}
+        {% assign totalCount = totalCount | plus: 1 %}
+    {% endunless %}
+{% endfor %}
 
+<div class="home">
     <div class="c-filter__container">
-        <p class="c-filter__total">Showing <span class="js-posts-displayed">{{ site.posts | size }}</span> of {{ site.posts | size }}</p>
+        <p class="c-filter__total">Showing <span class="js-posts-displayed">{{ totalCount }}</span> of {{ totalCount }}</p>
         <p>Filter by category:</p>
         <div class="c-filter__category-row">
             {% for category in site.categories %}
