@@ -36,7 +36,7 @@
 }
 
 $expand-trans: max-height 2s ease;
-$collapse-trans: max-height 2s cubic-bezier(0,1,0,1);
+$collapse-trans: max-height 2s cubic-bezier(0, 1, 0, 1);
 
 .animate-post {
     overflow: hidden;
