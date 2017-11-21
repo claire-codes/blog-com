@@ -1,11 +1,11 @@
 @charset "UTF-8";
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.5.1
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2016 Daniel Eden
- */
+// /*
+//  * animate.css -http://daneden.me/animate
+//  * Version - 3.5.1
+//  * Licensed under the MIT license - http://opensource.org/licenses/MIT
+//  *
+//  * Copyright (c) 2016 Daniel Eden
+//  */
 .animated {
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
@@ -130,7 +130,7 @@
     -webkit-animation-name: flash;
     animation-name: flash;
 }
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
 @-webkit-keyframes pulse {
     from {
         -webkit-transform: scale3d(1, 1, 1);
@@ -495,7 +495,7 @@
     -webkit-animation-name: tada;
     animation-name: tada;
 }
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
 @-webkit-keyframes wobble {
     from {
         -webkit-transform: none;
@@ -2614,7 +2614,7 @@
     -webkit-animation-name: hinge;
     animation-name: hinge;
 }
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
 @-webkit-keyframes rollIn {
     from {
         opacity: 0;
@@ -2646,7 +2646,7 @@
     -webkit-animation-name: rollIn;
     animation-name: rollIn;
 }
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
 @-webkit-keyframes rollOut {
     from {
         opacity: 1;
