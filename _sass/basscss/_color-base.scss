@@ -1,22 +1,21 @@
-/* Basscss Color Base */
-
+// /* Basscss Color Base */
 body {
-  color: $dark-gray;
-  background-color: white;
+    color: $dark-gray;
+    background-color: white;
 }
 
 a {
-  color: $blue;
-  text-decoration: none;
+    color: $blue;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 hr {
-  border: 0;
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-  border-bottom-color: $border-color;
+    border: 0;
+    border-bottom-style: solid;
+    border-bottom-width: $border-width;
+    border-bottom-color: $border-color;
 }

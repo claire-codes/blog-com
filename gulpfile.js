@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     sourcemaps = require('gulp-sourcemaps')
     cssnano = require('gulp-cssnano'),
-    uncss = require('gulp-uncss');
+    uncss = require('gulp-uncss'),
+    sassLint = require('gulp-sass-lint');
 
 gulp.task('css', function() {
     gulp.src('scss/pixyll.scss')
@@ -29,7 +30,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('default', [], function() {
-    gulp.start('css', 'images');
+    gulp.start('sass-lint', 'css', 'images');
 });
 
 gulp.task('uncss', function () {
@@ -39,4 +40,14 @@ gulp.task('uncss', function () {
         }))
         .pipe(rename('pixyll-uncss.css'))
         .pipe(gulp.dest('css/'));
+});
+
+
+gulp.task('sass-lint', function () {
+  return gulp.src('_sass/**/*.s+(a|c)ss')
+    .pipe(sassLint({
+       configFile: '.sass-lint.yml'
+     }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
