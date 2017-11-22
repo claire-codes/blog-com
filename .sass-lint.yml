@@ -47,4 +47,9 @@ rules:
   space-before-bang: 2
   space-before-brace: 2
   trailing-semicolon: 2
+  variable-for-property:
+    - 2
+    -
+      properties:
+        - 'font-family'
   zero-unit: 2
