@@ -10,7 +10,7 @@
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background: #fafafa;
+    background-color: #fafafa;
     border-radius: 0.1875em;
     border: 1px solid #f3f3f3;
     color: #333333;
@@ -23,12 +23,12 @@
 
 .pagination a:focus,
 .pagination a:hover {
-    background: white;
+    background-color: white;
     color: #477dca;
 }
 
 .pagination a:active {
-    background: #f7f7f7;
+    background-color: #f7f7f7;
 }
 
 .pagination .button {

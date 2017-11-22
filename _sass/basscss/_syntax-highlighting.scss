@@ -103,15 +103,15 @@
 }
 
 .hljs-deletion {
-    background: $hljs-deletion;
+    background-color: $hljs-deletion;
 }
 
 .hljs-addition {
-    background: $hljs-addition;
+    background-color: $hljs-addition;
 }
 
 .diff .hljs-change {
-    background: $hljs-change;
+    background-color: $hljs-change;
 }
 
 .hljs-chunk {

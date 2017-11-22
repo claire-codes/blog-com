@@ -20,6 +20,11 @@ rules:
     - 2
     -
       include: true
+  no-disallowed-properties:
+      - 2
+      -
+        properties:
+          - 'background'
   no-css-comments: 2
   no-debug: 1
   no-empty-rulesets: 2
