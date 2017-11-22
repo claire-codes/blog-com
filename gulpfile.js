@@ -30,7 +30,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('default', [], function() {
-    gulp.start('css', 'images');
+    gulp.start('sass-lint', 'css', 'images');
 });
 
 gulp.task('uncss', function () {

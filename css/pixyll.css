@@ -1,21 +1,9 @@
-@charset "UTF-8";
 /*
 * Pixyll - A simple, beautiful Jekyll theme that's mobile first.
 * @author John Otander <johnotander@gmail.com> (http://johnotander.com/)
 * @link https://github.com/johnotander/pixyll
 * @license MIT
 */
-/*
-
-  BASSCSS
-
-  Next-level CSS toolkit - basscss.com
-
-  Made with love by Jxnblk - ©2014 Brent Jackson
-  MIT License http://opensource.org/licenses/MIT
-
-*/
-/* Basscss Base Buttons */
 button {
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
   font-size: inherit;
@@ -36,7 +24,6 @@ button {
   border: 0;
   padding: 0; }
 
-/* Basscss Base Forms */
 input,
 textarea {
   font-size: 1rem;
@@ -68,7 +55,6 @@ textarea {
 img {
   max-width: 100%; }
 
-/* Basscss Base Typography */
 body {
   font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
   line-height: 1.5;
@@ -82,10 +68,10 @@ h4 {
   font-weight: 900;
   line-height: 1.25;
   margin-top: 1em;
-  margin-bottom: .5em; }
+  margin-bottom: 0.5em; }
 
-p,
 ol,
+p,
 ul {
   font-size: 1rem;
   margin-top: 0;
@@ -95,8 +81,8 @@ ol,
 ul {
   padding-left: 2rem; }
 
-pre,
-code {
+code,
+pre {
   font-family: "Source Code Pro", Consolas, monospace;
   font-size: inherit; }
 
@@ -104,6 +90,10 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow-x: scroll; }
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
 
 blockquote {
   margin-top: 2rem;
@@ -117,12 +107,12 @@ blockquote p {
   font-size: 1.25rem;
   font-style: italic; }
 
-h1,
-.h1 {
+.h1,
+h1 {
   font-size: 2.998rem; }
 
-h2,
-.h2 {
+.h2,
+h2 {
   font-size: 1.5rem; }
 
 h3 {
@@ -131,7 +121,6 @@ h3 {
 h4 {
   font-size: 1rem; }
 
-/* Basscss Color Base */
 body {
   color: #333;
   background-color: white; }
@@ -143,16 +132,14 @@ a {
 a:hover {
   text-decoration: underline; }
 
-/* Basscss Colors */
-
-/* Basscss Utility Headings */
-
-/* Basscss Utility Typography */
+hr {
+  border: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ccc; }
 
 .center {
   text-align: center; }
-
-/* Basscss Utility White Space */
 
 .mb2 {
   margin-bottom: 1rem; }
@@ -168,20 +155,8 @@ a:hover {
   padding-top: 0.5rem;
   padding-bottom: 1rem; }
 
-/*
-
-Pixyll
-
-A simple, beautiful theme for Jekyll that emphasizes content rather than
-aesthetic fluff.
-
-Built upon BASSCSS (http://jxnblk.github.io/basscss).
-
-Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander
-MIT License http://opensource.org/licenses/MIT
-
-*/
-html, body {
+body,
+html {
   height: auto;
   min-height: 100%; }
 
@@ -195,21 +170,22 @@ body {
 
 a {
   color: #0073d9;
-  text-shadow: white 1px 0px 0px, white -1px 0px 0px; }
+  text-shadow: white 1px 0 0, white -1px 0 0; }
 
-a:hover,
+a:active,
 a:focus,
-a:active {
+a:hover {
   border: 0;
   color: #00070d;
   text-decoration: none;
-  text-shadow: white 1px 0px 0px, white -1px 0px 0px; }
+  text-shadow: white 1px 0 0, white -1px 0 0; }
 
 button {
   text-shadow: none;
   background-image: none; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:after,
+.clearfix:before {
   content: ' ';
   display: table; }
 
@@ -221,8 +197,8 @@ pre code {
   background-color: transparent;
   border-radius: 0; }
 
-pre,
-code {
+code,
+pre {
   font-family: "Source Code Pro", Consolas, monospace; }
 
 code {
@@ -270,8 +246,8 @@ p {
   color: #333;
   line-height: 1.5; }
 
-small,
-.small {
+.small,
+small {
   font-size: 0.707rem; }
 
 sup {
@@ -299,9 +275,9 @@ sup {
 .site-header nav a {
   color: #666; }
 
-.site-header nav a:hover,
+.site-header nav a:active,
 .site-header nav a:focus,
-.site-header nav a:active {
+.site-header nav a:hover {
   color: #444;
   opacity: 1;
   border-bottom: 2px solid #444; }
@@ -309,8 +285,8 @@ sup {
 .site-nav a + a {
   margin-left: 1em; }
 
-.site-header a:hover,
-.c-posts .c-post a:hover .c-post__title {
+.c-posts .c-post a:hover .c-post__title,
+.site-header a:hover {
   opacity: 0.78; }
 
 .site-header {
@@ -322,18 +298,14 @@ sup {
 .site-header .fa {
   font-size: 30px; }
 
-/*
-  Table styles copied from Bootstrap
-  Copyright (c) 2013 Twitter, Inc
-*/
 table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1.5;
   font-size: 1.125rem; }
-  table > thead > tr > th,
+  table > tbody > tr > td,
   table > tbody > tr > th,
-  table > tbody > tr > td {
+  table > thead > tr > th {
     padding: 12px;
     line-height: 1.2;
     vertical-align: top;
@@ -343,22 +315,6 @@ table {
     border-bottom: 2px solid #333; }
   table > thead:first-child > tr:first-child > th {
     border-top: 0; }
-
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.5.1
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2016 Daniel Eden
- */
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 .site {
   display: -webkit-box;
@@ -447,8 +403,8 @@ blockquote {
 @media screen and (min-width: 32em) {
   html {
     font-size: 16px; }
-  h1,
-  .h1 {
+  .h1,
+  h1 {
     font-size: 2.998rem; }
   .site-header {
     text-align: left; }
@@ -461,7 +417,7 @@ blockquote {
     float: left; }
   .site-header .site-nav {
     float: right;
-    margin-top: .25rem; }
+    margin-top: 0.25rem; }
   blockquote {
     margin-left: 2rem;
     padding: 2rem; } }
