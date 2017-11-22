@@ -31,6 +31,7 @@ rules:
   no-ids: 1
   no-important: 1
   no-invalid-hex: 2
+  no-color-literals: 1
   no-misspelled-properties:
     - 2
     -
