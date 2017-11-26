@@ -63,7 +63,9 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 900;
   line-height: 1.25;
@@ -120,6 +122,12 @@ h3 {
 
 h4 {
   font-size: 1rem; }
+
+h5 {
+  font-size: 0.875rem; }
+
+h6 {
+  font-size: 0.75rem; }
 
 body {
   color: #333;
