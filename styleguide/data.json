@@ -30,7 +30,9 @@
         }
     },
     "assets": {
-        "css": ["../css/pixyll.css"],
+        "css": [
+            "../css/pixyll.css"
+        ],
         "js": []
     },
     "font_libraries": {
@@ -38,18 +40,39 @@
         "typography_web_fonts": null,
         "google_web_fonts": null
     },
-    "content": {
-        "show_first_page_on_load": true,
-        "title": "Overview",
-        "pages": [
-            {
-                "name": "introduction",
-                "title": "Introduction",
-                "file": "./pages/intro.md"
-            }
-        ]
-    },
+    "content": null,
     "groups": [
+        {
+            "name": "typography",
+            "title": "Typography",
+            "components": [
+                {
+                    "group": "typography",
+                    "name": "headings",
+                    "title": "Headings"
+                },
+                {
+                    "group": "typography",
+                    "name": "text",
+                    "title": "Body text"
+                },
+                {
+                    "group": "typography",
+                    "name": "links",
+                    "title": "Links"
+                },
+                {
+                    "group": "typography",
+                    "name": "inline-code",
+                    "title": "Inline Code"
+                },
+                {
+                    "group": "typography",
+                    "name": "code-block",
+                    "title": "Code blocks"
+                }
+            ]
+        },
         {
             "name": "widget",
             "title": "Widgets",
@@ -58,6 +81,21 @@
                     "group": "widget",
                     "name": "tldr",
                     "title": "TL;DR"
+                },
+                {
+                    "group": "widget",
+                    "name": "share-button",
+                    "title": "Share post button"
+                },
+                {
+                    "group": "widget",
+                    "name": "social-links",
+                    "title": "Social links"
+                },
+                {
+                    "group": "widget",
+                    "name": "interesting",
+                    "title": "Interesting post"
                 }
             ]
         },
