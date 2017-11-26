@@ -1,0 +1,115 @@
+{
+    "project_logo": null,
+    "project_favicon": "favicon.png",
+    "project_name": null,
+    "project_url": null,
+    "copyright_start_year": null,
+    "client_name": null,
+    "client_url": null,
+    "creators": [
+        {
+            "name": null,
+            "url": null
+        }
+    ],
+    "theme": {
+        "border_color": "#E0E6ED",
+        "highlight_color": "#F9FAFC",
+        "brand_color": "#00585C",
+        "background_color": "#FFFFFF",
+        "code_highlight_theme": "github",
+        "override_code_highlight_bg": "#F9FAFC",
+        "sample_dark_background": "#333333",
+        "show_project_name": true,
+        "show_version": true,
+        "max_width": null,
+        "titles": {
+            "library_title": "Pattern Library",
+            "pages_title": "Overview",
+            "components_title": "Components"
+        }
+    },
+    "assets": {
+        "css": [
+            "../css/pixyll.css"
+        ],
+        "js": []
+    },
+    "font_libraries": {
+        "typekit_code": null,
+        "typography_web_fonts": null,
+        "google_web_fonts": null
+    },
+    "content": null,
+    "groups": [
+        {
+            "name": "typography",
+            "title": "Typography",
+            "components": [
+                {
+                    "group": "typography",
+                    "name": "headings",
+                    "title": "Headings"
+                },
+                {
+                    "group": "typography",
+                    "name": "text",
+                    "title": "Body text"
+                },
+                {
+                    "group": "typography",
+                    "name": "links",
+                    "title": "Links"
+                },
+                {
+                    "group": "typography",
+                    "name": "inline-code",
+                    "title": "Inline Code"
+                },
+                {
+                    "group": "typography",
+                    "name": "code-block",
+                    "title": "Code blocks"
+                }
+            ]
+        },
+        {
+            "name": "widget",
+            "title": "Widgets",
+            "components": [
+                {
+                    "group": "widget",
+                    "name": "tldr",
+                    "title": "TL;DR"
+                },
+                {
+                    "group": "widget",
+                    "name": "share-button",
+                    "title": "Share post button"
+                },
+                {
+                    "group": "widget",
+                    "name": "social-links",
+                    "title": "Social links"
+                },
+                {
+                    "group": "widget",
+                    "name": "interesting",
+                    "title": "Interesting post"
+                }
+            ]
+        },
+        {
+            "name": "buttons",
+            "title": "Buttons",
+            "components": [
+                {
+                    "group": "buttons",
+                    "name": "primary",
+                    "title": "Button Test"
+                }
+            ]
+        }
+    ],
+    "version": "1.9.3"
+}
