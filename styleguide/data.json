@@ -37,8 +37,9 @@
     },
     "font_libraries": {
         "typekit_code": null,
-        "typography_web_fonts": null,
-        "google_web_fonts": null
+        "typography_web_fonts": "//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css",
+        "google_web_fonts": "//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic",
+        "google_web_fonts_2": "//fonts.googleapis.com/css?family=Lato:900,300"
     },
     "content": null,
     "groups": [
