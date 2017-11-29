@@ -365,13 +365,6 @@ footer {
     color: #00369f;
     opacity: 1; }
 
-.c-social-icons__screenreader_label {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden; }
-
 .c-social-icons__link {
   padding: 0.2em; }
 
@@ -524,3 +517,32 @@ blockquote {
 
 .c-tldr__title {
   margin-top: 0; }
+
+.c-interesting {
+  padding-left: 0; }
+
+.c-interesting__post {
+  list-style: none;
+  margin-bottom: 10px; }
+
+.c-interesting__date {
+  background-color: #f4bc42; }
+
+.u-visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.u-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
