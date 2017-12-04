@@ -2,17 +2,29 @@
 
 If you haven't got anything constructive to say about my blog, then go look in the mirror. Your hair looks _awful_ today.
 
+## Styleguide
+
+I maintain a styleguide for the blog which contains examples of common components and design patterns I use at [www.claireparker.co.uk/styleguide](http://www.claireparker.co.uk/styleguide). The styleguide is built using Astrum.
+
 ## Development
 
 ### Run locally
 
 `jekyll serve` - builds and runs locally at `http://127.0.0.1:4000/`
 
-### Write a new blog post
+### Rake tasks
+
+#### Write a new blog post
 
 `rake new_post[my-new-post]` or `rake new_post['my new post']`
 
 Or just copy the format of one already in the `_posts` folder, filling in the yaml as necessary 🤷‍♀️
+
+#### Write a new `interesting` post
+
+`rake interesting` and follow the prompts.
+
+The things you're interersted in that week are saved in a blog post as bullet points in the yaml config under the `interests` property.
 
 ### Gulp tasks
 
