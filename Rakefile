@@ -43,7 +43,7 @@ end
 
 # usage rake interests
 desc "Begin a new Interests post in #{source_dir}/#{interests_posts_dir}"
-task :interests do
+task :interesting do
   interest_one = get_stdin("What's the first thing you're interested in this week? ")
   interest_two = get_stdin("What's the second? ")
   interest_three = get_stdin("And the third? (Add or delete as you wish in the file) ")
