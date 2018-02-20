@@ -1,12 +1,8 @@
+///////////////////
+// UTILITY HELPERS
+//////////////////
 
-.u-visually-hidden {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-}
-
+// Taken from html5-boilerplate project
 .u-visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);

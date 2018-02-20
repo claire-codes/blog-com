@@ -9,11 +9,15 @@ pre {
     font-family: $monospace-font-family;
 }
 
+$color-code-background: #272822;
+$color-code-color: #f8f8f2;
+
 code {
-    color: #17156c;
-    background-color: $lightish-gray;
-    padding-left: 5px;
-    padding-right: 5px;
+    background-color: $color-code-background;
+    color: $color-code-color;
+    border-radius: 0.3em;
+    padding: 4px 5px 6px;
+    white-space: nowrap;
 }
 
 pre {

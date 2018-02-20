@@ -4,51 +4,20 @@
 * @link https://github.com/johnotander/pixyll
 * @license MIT
 */
-button {
-  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: inherit;
-  font-weight: normal;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
-  line-height: 1.125rem;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  height: auto;
-  border: 1px solid transparent;
-  vertical-align: middle;
-  -webkit-appearance: none; }
 
 ::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input,
-textarea {
+input {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-input[type=text] {
-  box-sizing: border-box;
-  height: 2.25rem;
-  padding: 0.5rem 0.5rem;
-  vertical-align: middle;
-  -webkit-appearance: none; }
-
-textarea {
-  box-sizing: border-box;
-  line-height: 1.75;
-  padding: 0.5rem 0.5rem; }
-
-body,
-button {
+body {
   margin: 0; }
 
-button,
-input,
-textarea {
+input {
   font-family: inherit;
   font-size: 100%; }
 
@@ -93,10 +62,6 @@ pre {
   margin-bottom: 1rem;
   overflow-x: scroll; }
 
-hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
-
 blockquote {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -140,12 +105,6 @@ a {
 a:hover {
   text-decoration: underline; }
 
-hr {
-  border: 0;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #ccc; }
-
 .center {
   text-align: center; }
 
@@ -188,10 +147,6 @@ a:hover {
   text-decoration: none;
   text-shadow: white 1px 0 0, white -1px 0 0; }
 
-button {
-  text-shadow: none;
-  background-image: none; }
-
 .clearfix:after,
 .clearfix:before {
   content: ' ';
@@ -210,10 +165,11 @@ pre {
   font-family: "Source Code Pro", Consolas, monospace; }
 
 code {
-  color: #17156c;
-  background-color: #ddd;
-  padding-left: 5px;
-  padding-right: 5px; }
+  background-color: #272822;
+  color: #f8f8f2;
+  border-radius: 0.3em;
+  padding: 4px 5px 6px;
+  white-space: nowrap; }
 
 pre {
   padding: 1.125em;
@@ -229,23 +185,10 @@ pre {
   word-break: inherit;
   word-wrap: inherit; }
 
-input,
-textarea {
+input {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0.5rem; }
-
-input[type=text] {
-  box-sizing: border-box;
-  height: 2.25rem;
-  padding: 0.5rem 0.5rem;
-  vertical-align: middle;
-  -webkit-appearance: none; }
-
-textarea {
-  box-sizing: border-box;
-  line-height: 1.75;
-  padding: 0.5rem 0.5rem; }
 
 html {
   font-size: 14px; }
@@ -312,7 +255,6 @@ table {
   margin-bottom: 1.5;
   font-size: 1.125rem; }
   table > tbody > tr > td,
-  table > tbody > tr > th,
   table > thead > tr > th {
     padding: 12px;
     line-height: 1.2;
@@ -524,16 +466,6 @@ blockquote {
 .c-interesting__post {
   list-style: none;
   margin-bottom: 10px; }
-
-.c-interesting__date {
-  background-color: #f4bc42; }
-
-.u-visually-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden; }
 
 .u-visually-hidden {
   border: 0;
