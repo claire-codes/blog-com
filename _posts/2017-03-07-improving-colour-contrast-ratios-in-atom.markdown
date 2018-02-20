@@ -39,7 +39,7 @@ Atom has a stylesheet that contains user-specific style customisations. This is 
 
 My selectors look something like this:
 
-```css
+```scss
 // Change tree view colours to create WCAG AAA standard contrast
 .list-group li.list-nested-item.selected > .list-item,
 .list-group li.list-nested-item > .list-item,

@@ -17,7 +17,7 @@ Well help is at hand to save you yet more precious keystrokes. Create a ✨globa
 
 From the terminal (bash shell on Mac OS X in my case):
 
-```sh
+```bash
 # Make sure you're in the home directory
 cd ~
 
