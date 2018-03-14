@@ -19,7 +19,7 @@ So I spent a couple of days retraining my fingers with a slightly amended alias 
 
 I eventually stumbled across a tweet that mentioned [git aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) and the lightbulb above my head turned on! 🤔💡 That was the method I'd used before. I quickly replaced `gits` with `git s` and have spent the last few days re-retraining my fingers to type `git s` again!
 
-```sh
+```bash
 $ git config --global alias.s status
 ```
 
