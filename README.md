@@ -1,6 +1,8 @@
-# [www.claireparker.co.uk](http://www.claireparker.co.uk)
+# 🚧 No longer maintained
 
-If you haven't got anything constructive to say about my blog, then go look in the mirror. Your hair looks _awful_ today.
+This is the previous iteration of my blog which was built with Jekyll. This has now been replaced by [www.clairecodes.com](https://www.clairecodes.com) which is built with Hugo.
+
+# [www.claireparker.co.uk](http://www.claireparker.co.uk)
 
 ## Styleguide
 
